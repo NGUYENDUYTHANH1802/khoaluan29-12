@@ -18,6 +18,11 @@ use App\Http\Controllers\Admin\PostManagementAdminController;
 use App\Http\Controllers\Admin\ProductManagementAdminController;
 use App\Http\Controllers\Admin\UserManagementAdminController;
 
+Route::get('/test', function(){
+    $databaseName = \DB::connection()->getDatabaseName();
+    dd($databaseName);
+});
+
 Route::get('/home', [HomeUserController::class, 'index']);
 
 Route::get('/search', [SearchUserController::class, 'index']);
