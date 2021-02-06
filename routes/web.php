@@ -11,6 +11,10 @@ use App\Http\Controllers\users\RegisterUserController;
 use App\Http\Controllers\users\LoginUserController; 
 use App\Http\Controllers\users\PostUserController;
 use App\Http\Controllers\users\PersonalPageUserController;
+use App\Http\Controllers\users\CategoryUserController;
+use App\Http\Controllers\users\typeUserController;
+use App\Http\Controllers\users\detailUserController;
+
 
 use App\Http\Controllers\Admin\HomeAdminController; 
 use App\Http\Controllers\Admin\CategoryManagerAdminController;
@@ -18,12 +22,32 @@ use App\Http\Controllers\Admin\PostManagementAdminController;
 use App\Http\Controllers\Admin\ProductManagementAdminController;
 use App\Http\Controllers\Admin\UserManagementAdminController;
 
-Route::get('/test', function(){
-    $databaseName = \DB::connection()->getDatabaseName();
-    dd($databaseName);
+
+use App\Models\chung_loai;
+use App\Models\san_pham;
+
+// Route::get('/test', function(){
+//     $databaseName = DB::connection()->getDatabaseName();
+//     dd($databaseName);
+// });
+
+/**
+ * Router for user pages
+ */
+Route::prefix('/')->group(function () {
+    Route::get('/home', [HomeUserController::class, 'index']);
+
+    Route::get('/category/{id}', [CategoryUserController::class, 'index']);
+
+    Route::get('/category/kindOfNews/{id}', [KindOfNewsUserController::class,'index']);
+
+    Route::get('/type', [typeUserController::class, 'index']);
+
+    // Route::get('/product/{id}', [KindOfNewsUserController::class, 'product']);
+
+    Route::get('/detail/{id}',[detailUserController::class,'index']);
 });
 
-Route::get('/home', [HomeUserController::class, 'index']);
 
 Route::get('/search', [SearchUserController::class, 'index']);
 
@@ -43,11 +67,14 @@ Route::get('/post', [PostUserController::class, 'index']);
 
 Route::get('/personal-page', [PersonalPageUserController::class, 'index']);
 
-// ------ Admin----------
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Router for user pages
+ */
 
 Route::prefix('admin')->group(function () {
     Route::get('/home-admin', [HomeAdminController::class, 'index']);
@@ -63,7 +90,31 @@ Route::prefix('admin')->group(function () {
 });
 
 
+Route::get('thu',function(){
+    $chungLoai = chung_loai::find(3 );
+    foreach($chungLoai->loaiSanPham as $loaiSanPham)
+    {
+        echo $loaiSanPham->ten."</br>";
+    }
+});
 
+// Route::get('thu1',function(){
+//     $chungLoai = chung_loai::find(1 );
+//     foreach($chungLoai->sanPham as $sanPham)
+//     {
+//         echo $sanPham->ten."</br>";
+//     }
+// });
+Route::get('thu1',function(){
+    foreach (chung_loai::all() as $chungLoai) {
+        echo $chungLoai->ten;
+    }
+});
+Route::get('thu2',function(){
+    foreach (san_pham::all() as $sanPham) {
+        echo $sanPham->ten; "</br>";
+    }
+});
 
 
 

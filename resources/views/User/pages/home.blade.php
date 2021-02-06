@@ -2,190 +2,6 @@
 
 @section('content')
 
-  <!-- Start slider  -->
-  <section id="aa-slider">
-    <div class="aa-slider-area"> 
-      <!-- Top slider -->
-      <div class="aa-top-slider">
-        <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">  
-          <img src="user/img/Anh01.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->
-        <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">
-          <img src="user/img/slider/2.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->
-        <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">
-          <img src="user/img/slider/1.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->       
-         <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">
-          <img src="user/img/slider/5.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->        
-         <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">
-          <img src="user/img/slider/4.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->
-         <!-- Top slider single slide -->
-        <div class="aa-top-slider-single">
-          <img src="user/img/slider/6.jpg" alt="img">
-          <!-- Top slider content -->
-          <div class="aa-top-slider-content">
-            <span class="aa-top-slider-catg">Duplex</span>
-            <h2 class="aa-top-slider-title">1560 Square Feet</h2>
-            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
-            <span class="aa-top-slider-off">30% OFF</span>
-            <p class="aa-top-slider-price">$460,000</p>
-            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-          </div>
-          <!-- / Top slider content -->
-        </div>
-        <!-- / Top slider single slide -->
-      </div>
-    </div>
-  </section> 
-  <!-- End slider  -->
-
-  <!-- Advance Search -->
-  <section id="aa-advance-search">
-    <div class="container">
-      <div class="aa-advance-search-area">
-        <div class="form">
-         <div class="aa-advance-search-top">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="aa-single-advance-search">
-                  <input type="text" placeholder="Type Your Location">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="aa-single-advance-search">
-                  <select>
-                   <option value="0" selected>Category</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-2">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-              </div>
-              </div>
-              <div class="col-md-2">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-              </div>
-              </div>
-              <div class="col-md-2">
-                <div class="aa-single-advance-search">
-                  <input class="aa-search-btn" type="submit" value="Search">
-                </div>
-              </div>
-            </div>
-          </div>
-         <div class="aa-advance-search-bottom">
-           <div class="row">
-            <div class="col-md-6">
-              <div class="aa-single-filter-search">
-                <span>AREA (SQ)</span>
-                <span>FROM</span>
-                <span id="skip-value-lower" class="example-val">30.00</span>
-                <span>TO</span>
-                <span id="skip-value-upper" class="example-val">100.00</span>
-                <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                </div>                  
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="aa-single-filter-search">
-                <span>PRICE ($)</span>
-                <span>FROM</span>
-                <span id="skip-value-lower2" class="example-val">30.00</span>
-                <span>TO</span>
-                <span id="skip-value-upper2" class="example-val">100.00</span>
-                <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                </div>      
-              </div>
-            </div>
-          </div>  
-         </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / Advance Search -->
-
   <!-- About us -->
   <section id="aa-about-us">
     <div class="container">
@@ -195,23 +11,23 @@
             <div class="row">
               <div class="col-md-5">
                 <div class="aa-about-us-left">
-                  <img src="user/img/about-us.png" alt="image">
+                  <img  src="user/img/Untitled-1.png" alt="image">
                 </div>
               </div>
               <div class="col-md-7">
                 <div class="aa-about-us-right">
                   <div class="aa-title">
-                    <h2>About Us</h2>
+                    <h2>Về Chúng Tôi</h2>
                     <span></span>
                   </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ab dignissimos vitae maxime adipisci blanditiis rerum quae quos! Id at rerum maxime modi fugit vero corrupti, ad atque sit laborum ipsum sunt blanditiis suscipit odio, aut nostrum assumenda nobis rem a maiores temporibus non commodi laboriosam, doloremque expedita! Corporis, provident?</p>                  
+                  <p>Mục đích tạo ra cho bạn một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ. Hàng ngàn món hàng từ Nhà cửa, Xe cộ, Đồ điện tử, Vật dụng cá nhân,... được đăng tin, rao bán, chia sẽ miễn phí cho những người cần quyên góp từ thiện, và những người có hoàn cảnh khó khăn.</p>                  
+                  <p>Với …,  bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, với nhiều lĩnh vực:</p>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, blanditiis.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>                    
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, blanditiis.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia.</li>
+                    <li>Đồ dùng cá nhân: quần áo, giày dép, túi xách, đồng hồ... đa phong cách, hợp thời trang.</li>
+                    <li>Đồ điện tử: điện thoại di động, máy tính bảng, laptop, tivi, loa, amply...; đồ điện gia dụng: máy giặt, tủ lạnh, máy lạnh... với rất nhiều nhãn hiệu, kích thước khác nhau.</li>
+                    <li>Vật nuôi, thú cưng đa chủng loại: gà, chó, chim, mèo, cá, hamster giá cực tốt.</li>                    
+                    <li>Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Chợ Tốt.</li>
+                    
                   </ul>
                 </div>
               </div>
@@ -228,180 +44,50 @@
     <div class="container">
       <div class="aa-latest-property-area">
         <div class="aa-title">
-          <h2>Latest Properties</h2>
+          <h2>Sản Phẩm Nổi Bật</h2>
           <span></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>         
+          <p>Những sản phẩm nổi bật được ưu thích nhất từ khách hàng</p>         
         </div>
         <div class="aa-latest-properties-content">
         <div class="row">
+            @foreach ($sanPhamNoiBat as $spNoiBat)
             <div class="col-md-4">
               <article class="aa-properties-item">
                 <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/1.jpg" alt="img">
+                  <img src="User/img/item/{{$spNoiBat->hinhanh}}" alt="img">
                 </a>
-                <div class="aa-tag for-sale">
-                  For Sale
-                </div>
+      
+                  @if ($spNoiBat->trangthai === 'Chưa Bán')
+                      <div class="aa-tag for-sale">
+                        {{ $spNoiBat->trangthai }}
+                      </div>
+                  @elseif ($spNoiBat->trangthai === 'Đang Bán')
+                      <div class="aa-tag for-rent">
+                        {{ $spNoiBat->trangthai }}
+                      </div>
+                  @else
+                     <div class="aa-tag sold-out">
+                        {{ $spNoiBat->trangthai }}
+                      </div>
+                  @endif
+           
                 <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
                   <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
+                    <h3><a href="#">{{ \Illuminate\Support\Str::limit($spNoiBat->ten, 25, '...') }}</a></h3>
+                    <p>{{ \Illuminate\Support\Str::limit($spNoiBat->mota, 39, '...') }}</p>                   
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      $35000
+                      {{ number_format($spNoiBat->gia) }}₫
                     </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
+                    <a href="#" class="aa-secondary-btn">{{ $spNoiBat->sdt}}</a>
                   </div>
                 </div>
               </article>
             </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/2.jpg" alt="img">
-                </a>
-                <div class="aa-tag for-rent">
-                  For Rent
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $11000
-                    </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/3.jpg" alt="img">
-                </a>
-                <div class="aa-tag sold-out">
-                  Sold Out
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $15000
-                    </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/4.jpg" alt="img">
-                </a>
-                <div class="aa-tag for-sale">
-                  For Sale
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $35000
-                    </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/5.jpg" alt="img">
-                </a>                
-                <div class="aa-tag sold-out">
-                  Sold Out
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $11000
-                    </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <img src="User/img/item/6.jpg" alt="img">
-                </a>
-                <div class="aa-tag for-rent">
-                  For Rent
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#">Appartment Title</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      $15000
-                    </span>
-                    <a href="#" class="aa-secondary-btn">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
+            @endforeach
+            
+            
           </div>
         </div>
       </div>
@@ -416,9 +102,9 @@
         <div class="col-md-12">
           <div class="aa-service-area">
             <div class="aa-title">
-              <h2>Our Service</h2>
+              <h2>Cam Kết</h2>
               <span></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+              <p>Chiasedocu.com sẽ trở thành một nơi để người mua và người bán kết nối nhanh chóng và thuận tiện- một thị trường mua bán sôi động.</p>
             </div>
             <!-- service content -->
             <div class="aa-service-content">
@@ -477,7 +163,7 @@
   <!-- / Service section -->
 
   <!-- Promo Banner Section -->
-  <section id="aa-promo-banner">
+  <!-- <section id="aa-promo-banner">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -489,163 +175,46 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / Promo Banner Section -->
 
   <!-- Our Agent Section-->
   <section id="aa-agents">
     <div class="container">
       <div class="row">
+      
         <div class="col-md-12">
+        
           <div class="aa-agents-area">
             <div class="aa-title">
-              <h2>Our Agents</h2>
+              <h2>Sản Phẩm Mới</h2>
               <span></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+              <p>Những sản phẩm mới nhất được cập nhật</p>
             </div>
             <!-- agents content -->
             <div class="aa-agents-content">
               <ul class="aa-agents-slider">
-                <li>
+              @foreach ($sanPhamNgauNhien as $spNgauNhien)
+                <li>               
                   <div class="aa-single-agents">
                     <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-1.png" alt="agent member image">
+                      <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image">
                     </div>
                     <div class="aa-agetns-info">
-                      <h4><a href="#">Philip Smith</a></h4>
-                      <span>Top Agent</span>
+                      <h4><a href="#">{{ $spNgauNhien->nguoiDung->ten}}</a></h4>
+                      <span>{{ number_format($spNgauNhien->gia) }}₫</span>
                       <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" style="border: none;"> {{ $spNgauNhien->sdt}} </a>
                       </div>
                     </div>
-                  </div>
+                  </div>         
                 </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-5.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">Adam Barney</a></h4>
-                      <span>Expert Agent</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-3.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">Paul Walker</a></h4>
-                      <span>Director</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-4.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">John Smith</a></h4>
-                      <span>Jr. Agent</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-1.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">Philip Smith</a></h4>
-                      <span>Top Agent</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-5.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">Adam Barney</a></h4>
-                      <span>Expert Agent</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-3.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">Paul Walker</a></h4>
-                      <span>Director</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="aa-single-agents">
-                    <div class="aa-agents-img">
-                      <img src="user/img/agents/agent-4.png" alt="agent member image">
-                    </div>
-                    <div class="aa-agetns-info">
-                      <h4><a href="#">John Smith</a></h4>
-                      <span>Jr. Agent</span>
-                      <div class="aa-agent-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                @endforeach
               </ul>
             </div>
           </div>
         </div>
+      
       </div>
     </div>
   </section>
@@ -718,7 +287,7 @@
   <!-- Client Testimonial -->
 
   <!-- Client brand -->
-  <section id="aa-client-brand">
+  <!-- <section id="aa-client-brand">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -779,81 +348,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- / Client brand -->
 
-  <!-- Latest blog -->
-  <section id="aa-latest-blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-latest-blog-area">
-            <div class="aa-title">
-              <h2>Latest News</h2>
-              <span></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe magni, est harum repellendus. Accusantium, nostrum!</p>
-            </div>
-            <div class="aa-latest-blog-content">
-              <div class="row">
-                <!-- start single blog -->
-                <div class="col-md-4">
-                  <article class="aa-blog-single">
-                    <figure class="aa-blog-img">
-                      <a href="#"><img src="user/img/blog-img-1.jpg" alt="img"></a>
-                      <span class="aa-date-tag">15 April, 16</span>
-                    </figure>
-                    <div class="aa-blog-single-content">
-                      <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum tempore dolores itaque, molestias vitae.</p>
-                      <div class="aa-blog-single-bottom">
-                        <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                        <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                      </div>
-                    </div>
-                   
-                  </article>
-                </div>
-                <!-- start single blog -->
-                <div class="col-md-4">
-                  <article class="aa-blog-single">
-                    <figure class="aa-blog-img">
-                      <a href="#"><img src="user/img/blog-img-2.jpg" alt="img"></a>
-                      <span class="aa-date-tag">15 April, 16</span>
-                    </figure>
-                    <div class="aa-blog-single-content">
-                      <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum tempore dolores itaque, molestias vitae.</p>
-                      <div class="aa-blog-single-bottom">
-                        <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                        <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                      </div>
-                    </div>                   
-                  </article>
-                </div>
-                <!-- start single blog -->
-                <div class="col-md-4">
-                  <article class="aa-blog-single">
-                    <figure class="aa-blog-img">
-                      <a href="#"><img src="user/img/blog-img-3.jpg" alt="img"></a>
-                      <span class="aa-date-tag">15 April, 16</span>
-                    </figure>
-                    <div class="aa-blog-single-content">
-                      <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum tempore dolores itaque, molestias vitae.</p>
-                      <div class="aa-blog-single-bottom">
-                        <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                        <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
-                      </div>
-                    </div>                   
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
   <!-- / Latest blog -->
 
 @endsection
