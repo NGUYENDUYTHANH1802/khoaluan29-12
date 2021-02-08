@@ -34,20 +34,30 @@ use App\Models\san_pham;
 /**
  * Router for user pages
  */
-Route::prefix('/')->group(function () {
+Route::get('', function (){
+    return redirect('home');
+});
+
+Route::prefix('')->group(function () {
     Route::get('/home', [HomeUserController::class, 'index']);
 
     Route::get('/category/{id}', [CategoryUserController::class, 'index']);
 
-    Route::get('/category/kindOfNews/{id}', [KindOfNewsUserController::class,'index']);
+    Route::get('/category/kindOfNews/{id}', [KindOfNewsUserController::class, 'index']);
 
     Route::get('/type', [typeUserController::class, 'index']);
 
     // Route::get('/product/{id}', [KindOfNewsUserController::class, 'product']);
 
-    Route::get('/detail/{id}',[detailUserController::class,'index']);
+    Route::get('/detail/{id}',[detailUserController::class, 'index']);
+
+    
 });
 
+Route::prefix('account')->group(function(){
+    Route::get('/signin.html',[LoginUserController::class, 'index']);
+    Route::post('/signin.html',[LoginUserController::class, 'login']);
+});
 
 Route::get('/search', [SearchUserController::class, 'index']);
 
@@ -68,9 +78,8 @@ Route::get('/post', [PostUserController::class, 'index']);
 Route::get('/personal-page', [PersonalPageUserController::class, 'index']);
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
 
 /**
  * Router for user pages

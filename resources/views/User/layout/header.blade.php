@@ -26,10 +26,17 @@
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
+              @if(Session::has('loginInfo'))
               <div class="aa-header-right">
-                <a href="register.html" class="aa-register">Register</a>
-                <a href="signin.html" class="aa-login">Login</a>
+                <a href="register.html" class="aa-register">{{ Session::get('loginInfo')->ten }}</a>
+                <a href="account/singout.html" class="aa-login">Đăng xuất</a>
               </div>
+              @else
+              <div class="aa-header-right">
+                <a href="register.html" class="aa-register">Đăng ký</a>
+                <a href="account/signin.html" class="aa-login">Đăng nhập</a>
+              </div>
+              @endif
             </div>
           </div>
         </div>
