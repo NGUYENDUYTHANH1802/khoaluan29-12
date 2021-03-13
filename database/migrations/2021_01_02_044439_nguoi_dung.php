@@ -19,7 +19,7 @@ class NguoiDung extends Migration
             $table->char('ten', 50);
             $table->string('email');
             $table->string('password');
-
+            $table->string('quyen');
         });
     }
 

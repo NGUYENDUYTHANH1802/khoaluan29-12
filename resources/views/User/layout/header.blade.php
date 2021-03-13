@@ -29,11 +29,11 @@
               @if(Session::has('loginInfo'))
               <div class="aa-header-right">
                 <a href="register.html" class="aa-register">{{ Session::get('loginInfo')->ten }}</a>
-                <a href="account/singout.html" class="aa-login">Đăng xuất</a>
+                <a href="account/logout.html" class="aa-login">Đăng xuất</a>
               </div>
-              @else
+              @else 
               <div class="aa-header-right">
-                <a href="register.html" class="aa-register">Đăng ký</a>
+                <a href="account/registration.html" class="aa-register">Đăng ký</a>
                 <a href="account/signin.html" class="aa-login">Đăng nhập</a>
               </div>
               @endif

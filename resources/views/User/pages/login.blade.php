@@ -61,7 +61,7 @@
                                 </div>
                             @endif
                             <div class="aa-signin-form-title">
-                                <a class="aa-property-home" href="index.html">Đăng Nhập Tài Khoản</a>
+                                <a class="aa-property-home" href="home">Đăng Nhập Tài Khoản</a>
                                 <!-- <h4>Sign in to your account</h4> -->
                             </div>
                             <form class="contactform" action="account/signin.html" method="post">
@@ -75,7 +75,6 @@
                                     <input type="password" name="password" value="{{ old('password') }}">
                                 </div>
                                 <div class="aa-single-field">
-
                                 </div>
                                 <div class="aa-single-submit">
                                     <input type="submit" value="Đăng Nhập" class="aa-browse-btn" name="submit">

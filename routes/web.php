@@ -9,6 +9,7 @@ use App\Http\Controllers\users\ProductUserController;
 use App\Http\Controllers\users\ContactUserController;
 use App\Http\Controllers\users\RegisterUserController;
 use App\Http\Controllers\users\LoginUserController; 
+use App\Http\Controllers\users\LogoutUserController; 
 use App\Http\Controllers\users\PostUserController;
 use App\Http\Controllers\users\PersonalPageUserController;
 use App\Http\Controllers\users\CategoryUserController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\Admin\CategoryManagerAdminController;
 use App\Http\Controllers\Admin\PostManagementAdminController;
 use App\Http\Controllers\Admin\ProductManagementAdminController;
 use App\Http\Controllers\Admin\UserManagementAdminController;
+use App\Http\Controllers\Admin\AccountController;
 
 
 use App\Models\chung_loai;
@@ -57,7 +59,14 @@ Route::prefix('')->group(function () {
 Route::prefix('account')->group(function(){
     Route::get('/signin.html',[LoginUserController::class, 'index']);
     Route::post('/signin.html',[LoginUserController::class, 'login']);
+    // Route::get('/logout.html',[LogoutUserController::class, 'index']);
+    Route::get('/logout.html',[LoginUserController::class, 'logout']);
+
+    Route::get('/registration.html',[RegisterUserController::class, 'index']);
+    Route::post('/registration.html',[RegisterUserController::class, 'register']);
 });
+
+
 
 Route::get('/search', [SearchUserController::class, 'index']);
 
@@ -85,7 +94,7 @@ Route::get('/personal-page', [PersonalPageUserController::class, 'index']);
  * Router for user pages
  */
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('checkLoginAdmin')->group( function () {
     Route::get('/home-admin', [HomeAdminController::class, 'index']);
 
     Route::get('/category-manager', [CategoryManagerAdminController::class, 'index']);
@@ -95,6 +104,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/product-management', [ProductManagementAdminController::class, 'index']);
 
     Route::get('/user-management', [UserManagementAdminController::class, 'index']);
+
+    Route::get('/add-account', [AccountController::class, 'index']);
 
 });
 

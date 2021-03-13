@@ -12,4 +12,10 @@ class RegisterUserController extends Controller
         
         return view('User.pages.register');
     }
+    
+    public function register(Request $req){
+        $dataReq = $req->all();
+
+        
+    }   
 }
