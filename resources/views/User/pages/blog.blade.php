@@ -26,7 +26,7 @@
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-blog-single">
                         <figure class="aa-blog-img">
-                          <a href="#"><img alt="img" src="user/img/{{ $blog->hinhanh }}"></a>
+                          <a href="blogdetail.html/{{ $blog->id }}"><img alt="img" src="user/img/blog/{{ $blog->hinhanh }}"></a>
                           <span class="aa-date-tag">{{ date("d/m/Y", strtotime($blog->created_at ) )}}</span>
                         </figure>
                         <div class="aa-blog-single-content">

@@ -16,6 +16,8 @@ use App\Http\Controllers\users\CategoryUserController;
 use App\Http\Controllers\users\typeUserController;
 use App\Http\Controllers\users\detailUserController;
 use App\Http\Controllers\users\BlogUserController;
+use App\Http\Controllers\users\BlogDetailUserController;
+
 
 
 use App\Http\Controllers\Admin\HomeAdminController; 
@@ -25,6 +27,7 @@ use App\Http\Controllers\Admin\ProductManagementAdminController;
 use App\Http\Controllers\Admin\UserManagementAdminController;
 use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\listAccountController;
+use App\Http\Controllers\Admin\BlogAdminController;
 
 
 
@@ -59,9 +62,9 @@ Route::prefix('')->group(function () {
     Route::get('/contact.html', [ContactUserController::class, 'index']);
 
     Route::get('/blog.html', [BlogUserController::class, 'index']);
-
     Route::get('/createblog.html', [BlogUserController::class, 'create']);
     Route::post('createblog.html',[BlogUserController::class, 'postCreate']);
+    Route::get('/blogdetail.html/{id}', [BlogUserController::class, 'view']);
     
 });
 
@@ -114,6 +117,11 @@ Route::prefix('admin')->middleware('checkLoginAdmin')->group( function () {
 
     Route::get('/add', [AccountController::class, 'add']);
     Route::get('/list-account', [AccountController::class, 'list']);
+
+    Route::get('/createblog', [BlogAdminController::class, 'index']);
+    Route::post('/createblog', [BlogAdminController::class, 'create']);
+    Route::get('/list-blog', [BlogAdminController::class, 'list']);
+
 
 });
 

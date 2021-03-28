@@ -1,42 +1,34 @@
-@extends('user.layout.index')
+@extends('admin.layout.index')
 
-
-@section('css')
-<style>
-  .container-button {
-    margin-top: 10px;
-    text-align: center;
-  }
-</style>
+@section('title')
+Thêm tài khoản
 @endsection
 
 @section('content')
-
-<!-- Start Blog  -->
-<section id="aa-blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="aa-blog-area">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="aa-blog-content">
-                <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <form action="createblog.html" method="post" enctype="multipart/form-data">
-                      @csrf
-                      <div class="form-group">
-                        <label for="tieude">Tiêu đề</label>
-                        <input type="text" class="form-control" id="tieude" name="tieude" required=""/>
-                      </div>
-                      <div class="form-group">
-                        <label for="mota">Mô tả</label>
-                        <input type="text" class="form-control" id="mota" name="mota" required="" />
-                      </div>
-                      <div class="form-group">
+<main >
+	<div class="container-fluid">
+		<h1 class="mt-4">Thêm mới bài viết</h1>
+		<ol class="breadcrumb mb-4">
+			<li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+			<li class="breadcrumb-item active">Thêm bài viết</li>
+		</ol>
+		<div class="row">
+			<div class="col-12">
+				<form action="admin/createblog" method="post" enctype="multipart/form-data">
+					@csrf
+					<div class="form-group">
+						<label class="small mb-1" for="tieude">Tiêu đề</label>
+						<input class="form-control py-4" id="tieude" name="tieude" type="text" placeholder="Nhập tiêu đề" required="" />
+					</div>
+					<div class="form-group">
+						<label class="small mb-1" for="mota">Mô tả</label>
+						<input class="form-control py-4" id="mota" type="text" name="mota" placeholder="Nhập mô tả" required="" />
+					</div>
+					<div class="form-group">
                         <label for="hinhanh">Hình ảnh</label>
                         <input id="file-upload" type="file" name="hinhanh" required="" />
                         <div id="preview">
+                       <!--  <img v-if="url" :src="url" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px" /> -->
                           <img src="#" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
 
                         </div>                                        
@@ -48,21 +40,11 @@
                         <button type="submit" class="btn btn-success">Lưu</button>
                         <button type="reset" class="btn mt-2">Nhập lại</button>
                       </div>
-                    </form>
-
-                    <input name="image" type="file" id="upload" class="hidden">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- / Blog  -->
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
 
 <script>
   $(document).ready(function() {
@@ -109,20 +91,20 @@
     });
   });
 
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+  	function readURL(input) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#image-tag').attr('src', e.target.result);
-        }
+	        reader.onload = function (e) {
+	            $('#image-tag').attr('src', e.target.result);
+	        }
 
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
 
-$("#file-upload").change(function(){
-    readURL(this);
-});
+	$("#file-upload").change(function(){
+	    readURL(this);
+	});
 </script>
 @endsection

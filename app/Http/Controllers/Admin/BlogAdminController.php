@@ -1,30 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Users;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\bai_viet;
 
-class BlogUserController extends Controller
+class BlogAdminController extends Controller
 {
     /** 
      * Create layout category for user page 
      */
     public function index()
     {
-    	$blog = bai_viet::paginate(6);
-        return view('user.pages.blog', compact(['blog']));
+	 	return view('admin.pages.blog.add');
     }
 
-     /** 
-     */
-    public function create()
-    {
-        return view('user.pages.createblog');
-    }
-
-    public function postCreate(Request $request)
+ 	public function create(Request $request)
     {
     	$blog = new bai_viet();
 
@@ -41,14 +33,14 @@ class BlogUserController extends Controller
             $blog->hinhanh = $imageName;
         }
         $blog->save();
-
-        return redirect('blog.html');
+        return redirect('admin/list-blog');
+        // return redirect('blog.html');
     }
 
-    public function view($id)
-    {
-        $blog = bai_viet::where('id', $id)->first();
-        return view('User.pages.blogdetail',compact(['blog']));
 
+    public function list()
+    {
+    	$blog = bai_viet::all();
+    	return view('admin.pages.blog.list', compact(['blog']));
     }
 }

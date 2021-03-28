@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="aa-single-submit">
                                     <input type="submit" value="Đăng Nhập" class="aa-browse-btn" name="submit">
-                                    <p>Chưa có tài khoản? <a href="register.html">HÃY TẠO NGAY! </a></p>
+                                    <p>Chưa có tài khoản? <a href="account/registration.html">HÃY TẠO NGAY! </a></p>
                                 </div>
                             </form>
                         </div>
