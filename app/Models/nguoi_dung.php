@@ -14,5 +14,8 @@ class nguoi_dung extends Model
         return $this->hasMany('App\Models\san_pham','id_nguoi_dung','id');
     }
 
-    
+    public function baiViet()
+    {
+        return $this->hasMany('App\Models\bai_viet','id_nguoi_dung','id');
+    }
 }

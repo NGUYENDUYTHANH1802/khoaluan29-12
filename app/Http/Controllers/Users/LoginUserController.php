@@ -14,6 +14,7 @@ class LoginUserController extends Controller
 {
     // layout login account
     public function index(){
+
         return view('User.pages.login');
     }
 
@@ -21,6 +22,7 @@ class LoginUserController extends Controller
     {
         // Bước 1: Lấy thông tin đăng nhập từ form
         $dataReq = $req->all();
+        
 
         // Bước 2: Kiểm tra giá trị nhập từ Input
         $rules = [

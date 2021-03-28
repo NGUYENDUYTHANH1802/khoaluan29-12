@@ -66,7 +66,7 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li class="active"><a href="index.html">Trang Chủ</a></li>
+          <li class="active"><a href="home">Trang Chủ</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">Chủng Loại <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -77,15 +77,17 @@
             </ul>
           </li>
           <li><a href="gallery.html">Loại Sản Phẩm</a></li>
+           <!--
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">BLOG <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">Bài viết <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="blog-archive.html">BLOG</a></li>
               <li><a href="blog-single.html">BLOG DETAILS</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li><a href="404.html">404 PAGE</a></li>
+          -->
+          <li><a href="blog.html">Bài viết</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -193,87 +195,3 @@
   </div>
 </section>
 <!-- End slider  -->
-
-<!-- Advance Search -->
-<section id="aa-advance-search">
-  <div class="container">
-    <div class="aa-advance-search-area">
-      <div class="form">
-        <div class="aa-advance-search-top">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="aa-single-advance-search">
-                <input type="text" placeholder="Type Your Location">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="aa-single-advance-search">
-                <select>
-                  <option value="0" selected>Category</option>
-                  <option value="1">Flat</option>
-                  <option value="2">Land</option>
-                  <option value="3">Plot</option>
-                  <option value="4">Commercial</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="aa-single-advance-search">
-                <select>
-                  <option value="0" selected>Type</option>
-                  <option value="1">Flat</option>
-                  <option value="2">Land</option>
-                  <option value="3">Plot</option>
-                  <option value="4">Commercial</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="aa-single-advance-search">
-                <select>
-                  <option value="0" selected>Type</option>
-                  <option value="1">Flat</option>
-                  <option value="2">Land</option>
-                  <option value="3">Plot</option>
-                  <option value="4">Commercial</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="aa-single-advance-search">
-                <input class="aa-search-btn" type="submit" value="Search">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="aa-advance-search-bottom">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="aa-single-filter-search">
-                <span>AREA (SQ)</span>
-                <span>FROM</span>
-                <span id="skip-value-lower" class="example-val">30.00</span>
-                <span>TO</span>
-                <span id="skip-value-upper" class="example-val">100.00</span>
-                <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="aa-single-filter-search">
-                <span>PRICE ($)</span>
-                <span>FROM</span>
-                <span id="skip-value-lower2" class="example-val">30.00</span>
-                <span>TO</span>
-                <span id="skip-value-upper2" class="example-val">100.00</span>
-                <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- / Advance Search -->

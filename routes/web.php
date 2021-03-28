@@ -15,6 +15,7 @@ use App\Http\Controllers\users\PersonalPageUserController;
 use App\Http\Controllers\users\CategoryUserController;
 use App\Http\Controllers\users\typeUserController;
 use App\Http\Controllers\users\detailUserController;
+use App\Http\Controllers\users\BlogUserController;
 
 
 use App\Http\Controllers\Admin\HomeAdminController; 
@@ -23,6 +24,8 @@ use App\Http\Controllers\Admin\PostManagementAdminController;
 use App\Http\Controllers\Admin\ProductManagementAdminController;
 use App\Http\Controllers\Admin\UserManagementAdminController;
 use App\Http\Controllers\Admin\AccountController;
+use App\Http\Controllers\Admin\listAccountController;
+
 
 
 use App\Models\chung_loai;
@@ -53,6 +56,12 @@ Route::prefix('')->group(function () {
 
     Route::get('/detail/{id}',[detailUserController::class, 'index']);
 
+    Route::get('/contact.html', [ContactUserController::class, 'index']);
+
+    Route::get('/blog.html', [BlogUserController::class, 'index']);
+
+    Route::get('/createblog.html', [BlogUserController::class, 'create']);
+    Route::post('createblog.html',[BlogUserController::class, 'postCreate']);
     
 });
 
@@ -64,11 +73,13 @@ Route::prefix('account')->group(function(){
 
     Route::get('/registration.html',[RegisterUserController::class, 'index']);
     Route::post('/registration.html',[RegisterUserController::class, 'register']);
+
+     Route::get('/registerout.html',[LoginUserController::class, 'registerout']);
 });
 
 
 
-Route::get('/search', [SearchUserController::class, 'index']);
+
 
 Route::get('/species', [SpeciesUserController::class, 'index']);
 
@@ -76,7 +87,6 @@ Route::get('/product-type', [ProductTypeUserController::class, 'index']);
 
 Route::get('/product', [ProductUserController::class, 'index']);
 
-Route::get('/contact', [ContactUserController::class, 'index']);
 
 Route::get('/register', [RegisterUserController::class, 'index']);
 
@@ -85,9 +95,6 @@ Route::get('/login', [LoginUserController::class, 'index']);
 Route::get('/post', [PostUserController::class, 'index']);
 
 Route::get('/personal-page', [PersonalPageUserController::class, 'index']);
-
-
-
 
 
 /**
@@ -105,7 +112,8 @@ Route::prefix('admin')->middleware('checkLoginAdmin')->group( function () {
 
     Route::get('/user-management', [UserManagementAdminController::class, 'index']);
 
-    Route::get('/add-account', [AccountController::class, 'index']);
+    Route::get('/add', [AccountController::class, 'add']);
+    Route::get('/list-account', [AccountController::class, 'list']);
 
 });
 
@@ -135,9 +143,3 @@ Route::get('thu2',function(){
         echo $sanPham->ten; "</br>";
     }
 });
-
-
-
-
-
-

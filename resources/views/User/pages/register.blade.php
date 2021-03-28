@@ -8,7 +8,7 @@
     <base href="{{asset('')}}">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="User/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
     
     <!-- Font awesome -->
@@ -49,29 +49,39 @@
         <div class="col-md-12">
           <div class="aa-signin-area">
             <div class="aa-signin-form">
+               @if ($errors->any())
+                                <div class="alert alert-danger alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    @foreach ($errors->all() as $error)
+                                        <span>{{ $error }}</span>
+                                       @break
+                                    @endforeach
+                                </div>
+                            @endif
               <div class="aa-signin-form-title">
-                <!-- <a class="aa-property-home" href="index.html">Property Home</a> -->
-                <h4>Đăng Ký Tài Khoản</h4>
+                <a class="aa-property-home" href="home">Đăng Ký Tài Khoản Khoản</a>
               </div>
-              <form class="contactform">                                                 
+              <form class="contactform" action="account/registration.html" method="post">
+                @csrf                          
                 <div class="aa-single-field">
                   <label for="name">Tên <span class="required">*</span></label>
-                  <input type="text" required="required" aria-required="true" value="" name="name">
+                  <input type="text" aria-required="true" value="{{ old('name') }}" name="name">
                 </div>
                 <div class="aa-single-field">
                   <label for="email">Email <span class="required">*</span></label>
-                  <input type="email" required="required" aria-required="true" value="" name="email">
+                  <input type="email"  aria-required="true" value="{{ old('email') }}" name="email">
                 </div>
                 <div class="aa-single-field">
                   <label for="password">Mật Khẩu <span class="required">*</span></label>
-                  <input type="password" name="password"> 
+                  <input type="password" name="password" value="{{ old('password') }}"> 
                 </div>
                 <div class="aa-single-field">
                   <label for="confirm-password">Xác Nhận Mật Khẩu <span class="required">*</span></label>
-                  <input type="password" name="confirm-password"> 
+                  <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"> 
                 </div>
+              
                 <div class="aa-single-submit">
-                  <input type="submit" value="Đăng Ký" name="submit">                    
+                <input type="submit" value="Đăng Ký" class="aa-browse-btn" name="submit">                  
                 </div>
               </form>
             </div>

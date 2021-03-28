@@ -14,8 +14,8 @@
             </a>
             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="admin/add-account">Thêm mới</a>
-                    <a class="nav-link" href="admin/category-manager">Danh Sách</a>
+                    <a class="nav-link" href="admin/add">Thêm mới</a>
+                    <a class="nav-link" href="admin/list-account">Danh Sách</a>
                 </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

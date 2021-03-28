@@ -32,6 +32,10 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
   @yield('css')
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="user/js/jquery.min.js"></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -48,9 +52,7 @@
 
   @include('user.layout.footer')
 
-  <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="user/js/jquery.min.js"></script>
+  
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="user/js/bootstrap.js"></script>
   <!-- slick slider -->
@@ -63,6 +65,8 @@
   <script type="text/javascript" src="user/js/jquery.fancybox.pack.js"></script>
   <!-- Custom js -->
   <script src="user/js/custom.js"></script>
+
+  <script src='js/tinymce/tinymce.js'></script>
 
   @yield('script')
 

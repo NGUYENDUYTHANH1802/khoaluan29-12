@@ -1,6 +1,7 @@
 @extends('user.layout.index')
 
 @section('content')
+  @include('user.layout.search')
 
   <!-- About us -->
   <section id="aa-about-us">

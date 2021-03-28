@@ -1,6 +1,7 @@
 @extends('user.layout.index')
 
 @section('content')
+@include('user.layout.search')
 <!-- Start Properties  -->
 <section id="aa-properties">
     <div class="container">
