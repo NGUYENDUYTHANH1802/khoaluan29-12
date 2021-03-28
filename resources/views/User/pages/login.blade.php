@@ -60,6 +60,12 @@
                                     @endforeach
                                 </div>
                             @endif
+                            @if (Session::has('message'))
+                                <div class="alert alert-success alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <span>{{ Session::get('message') }}</span>
+                                </div>
+                            @endif
                             <div class="aa-signin-form-title">
                                 <a class="aa-property-home" href="home">Đăng Nhập Tài Khoản</a>
                                 <!-- <h4>Sign in to your account</h4> -->

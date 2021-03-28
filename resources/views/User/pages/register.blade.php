@@ -50,22 +50,22 @@
           <div class="aa-signin-area">
             <div class="aa-signin-form">
                @if ($errors->any())
-                                <div class="alert alert-danger alert-dismissable">
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                                    @foreach ($errors->all() as $error)
-                                        <span>{{ $error }}</span>
-                                       @break
-                                    @endforeach
-                                </div>
-                            @endif
+                  <div class="alert alert-danger alert-dismissable">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                      @foreach ($errors->all() as $error)
+                          <span>{{ $error }}</span>
+                         @break
+                      @endforeach
+                  </div>
+              @endif
               <div class="aa-signin-form-title">
                 <a class="aa-property-home" href="home">Đăng Ký Tài Khoản Khoản</a>
               </div>
               <form class="contactform" action="account/registration.html" method="post">
                 @csrf                          
                 <div class="aa-single-field">
-                  <label for="name">Tên <span class="required">*</span></label>
-                  <input type="text" aria-required="true" value="{{ old('name') }}" name="name">
+                  <label for="ten">Tên <span class="required">*</span></label>
+                  <input type="text" aria-required="true" value="{{ old('ten') }}" name="ten">
                 </div>
                 <div class="aa-single-field">
                   <label for="email">Email <span class="required">*</span></label>
@@ -77,11 +77,11 @@
                 </div>
                 <div class="aa-single-field">
                   <label for="confirm-password">Xác Nhận Mật Khẩu <span class="required">*</span></label>
-                  <input type="password" name="confirm-password" value="{{ old('confirm-password') }}"> 
+                  <input type="password" name="password_confirmation" value="{{ old('password_confirmation') }}"> 
                 </div>
               
                 <div class="aa-single-submit">
-                <input type="submit" value="Đăng Ký" class="aa-browse-btn" name="submit">                  
+                <input type="submit" value="Đăng Ký" class="aa-browse-btn">                 
                 </div>
               </form>
             </div>

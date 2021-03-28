@@ -8,7 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class nguoi_dung extends Model
 {
     use HasFactory;
+    
     protected $table ="nguoi_dung";
+
+    protected $fillable = ['ten','email', 'password', 'quyen'];
+
+    public $timestamps = false;
+
     public function chungLoai()
     {
         return $this->hasMany('App\Models\san_pham','id_nguoi_dung','id');
