@@ -14,9 +14,10 @@ use App\Http\Controllers\users\PostUserController;
 use App\Http\Controllers\users\PersonalPageUserController;
 use App\Http\Controllers\users\CategoryUserController;
 use App\Http\Controllers\users\typeUserController;
-use App\Http\Controllers\users\detailUserController;
-use App\Http\Controllers\users\BlogUserController;
+use App\Http\Controllers\users\DetailUserController;
+use App\Http\Controllers\users\ProductsUserController;
 use App\Http\Controllers\users\BlogDetailUserController;
+
 
 
 
@@ -64,14 +65,15 @@ Route::prefix('')->group(function () {
 
     // Route::get('/product/{id}', [KindOfNewsUserController::class, 'product']);
 
-    Route::get('/detail/{id}',[detailUserController::class, 'index']);
+    Route::get('/detail/{id}',[DetailUserController::class, 'index']);
 
     Route::get('/contact.html', [ContactUserController::class, 'index']);
 
-    Route::get('/blog.html', [BlogUserController::class, 'index']);
-    Route::get('/createblog.html', [BlogUserController::class, 'create']);
-    Route::post('createblog.html',[BlogUserController::class, 'postCreate']);
-    Route::get('/blogdetail.html/{id}', [BlogUserController::class, 'view']);
+    Route::get('/products.html', [ProductsUserController::class, 'index']);
+    Route::get('/createProducts.html', [ProductsUserController::class, 'create']);
+    Route::post('/ajax-types', [ProductsUserController::class, 'ajaxTypes']);
+    Route::post('createProducts.html',[ProductsUserController::class, 'postCreate']);
+    Route::get('/Productdetail.html/{id}', [ProductsUserController::class, 'view']);
     
 });
 

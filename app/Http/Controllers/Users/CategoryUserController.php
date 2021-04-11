@@ -24,7 +24,7 @@ class CategoryUserController extends Controller
             array_push($typeID, $type->id);
         }
 
-        $productsByIDCategory = san_pham::whereIn('id_loai_san_pham', $typeID)->paginate(6);
+        $productsByIDCategory = san_pham::whereIn('id_loai_san_pham', $typeID)->paginate(1);
 
         $productsRandom = san_pham::whereNotIn('id_loai_san_pham', $typeID)->limit(6)->get();
         // dd($productsRandom);

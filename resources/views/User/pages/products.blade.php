@@ -14,26 +14,26 @@
                   @if(Session::has('loginInfo'))
                   <div class="row">
                     <div class="col-md-12">
-                      <a href="createblog.html">
-                        <button class="btn btn-primary" style="float: right; margin-bottom: 20px;">Tạo bài viết</button>
+                      <a href="createProducts.html">
+                        <button class="btn btn-primary" style="float: right; margin-bottom: 20px;">Đăng sản phẩm</button>
                       </a>
                     </div>
                   </div>
                   @endif
 
                   <div class="row">
-                    @foreach ( $blog as $blog)
+                    @foreach ( $products as $product)
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-blog-single">
                         <figure class="aa-blog-img">
-                          <a href="blogdetail.html/{{ $blog->id }}"><img alt="img" src="user/img/blog/{{ $blog->hinhanh }}"></a>
-                          <span class="aa-date-tag">{{ date("d/m/Y", strtotime($blog->created_at ) )}}</span>
+                          <a href="blogdetail.html/{{ $product->id }}"><img alt="img" src="User/img/item/{{ $product->hinhanh }}"></a>
+                          <span class="aa-date-tag">{{ date("d/m/Y", strtotime($product->created_at ) )}}</span>
                         </figure>
                         <div class="aa-blog-single-content">
-                          <h3><a href="blogdetail.html">{{ $blog->tieude }}</a></h3>
-                          <p>{{ $blog->mota }}</p>
+                          <h3><a href="blogdetail.html">{{ $product->tieude }}</a></h3>
+                          <p>{{ $product->mota }}</p>
                           <div class="aa-blog-single-bottom">
-                            <a class="aa-blog-author" href="#"><i class="fa fa-user"></i> {{ $blog->nguoiDung->ten }}</a>
+                            <a class="aa-blog-author" href="#"><i class="fa fa-user"></i> {{ $product->nguoiDung->ten }}</a>
                             <a class="aa-blog-comments" href="#"><i class="fa fa-comment-o"></i>6</a>
                           </div>
                         </div>                   
@@ -44,25 +44,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="aa-properties-content-bottom">
-                        <nav>
-                          <ul class="pagination">
-                            <li>
-                              <a aria-label="Previous" href="#">
-                                <span aria-hidden="true">«</span>
-                              </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li class="active"><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a aria-label="Next" href="#">
-                                <span aria-hidden="true">»</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
+                        {{ $products->links() }}
                       </div>
                     </div>
                   </div>

@@ -18,7 +18,7 @@
                     <!-- Start properties content body -->
                     <div class="aa-properties-content-body">
                         <ul class="aa-properties-nav">
-                            @foreach ( $productsByIDCategory as $productID)
+                            @foreach ($productsByIDCategory as $productID)
                             <li>
                                 <article class="aa-properties-item">
                                     <a class="aa-properties-item-img" href="detail/{{ $productID->id }}">
@@ -59,26 +59,7 @@
                     </div>
                     <!-- Start properties content bottom -->
                     <div class="aa-properties-content-bottom">
-                        <nav>
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li class="active"><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                             
-                            </ul>
-                        </nav>
+                        {{ $productsByIDCategory->links() }}
                     </div>
                  
                 </div>

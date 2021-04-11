@@ -8,7 +8,7 @@ use App\Models\chung_loai;
 use App\Models\san_pham;
 use App\Models\loai_san_pham;
 
-class detailUserController extends Controller
+class DetailUserController extends Controller
 {
     //
     public function index($id)
@@ -21,9 +21,10 @@ class detailUserController extends Controller
             $msg = "Không có sản phẩm!";
         }
 
-        $sanPhamCungTheLoai = san_pham::where('id_loai_san_pham','$id_loai_san_pham')->get();
+        $sanPhamCungTheLoai = san_pham::where('id_loai_san_pham', $detail->id_loai_san_pham)->get();
+        $theLoaiKhac = loai_san_pham::where('id', '<>', $detail->id_loai_san_pham)->get();
 
-        return view('User.pages.detail',compact(['detail','sanPhamCungTheLoai']));
+        return view('User.pages.detail',compact(['detail','sanPhamCungTheLoai', 'theLoaiKhac']));
 
     }
 }

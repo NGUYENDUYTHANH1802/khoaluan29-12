@@ -58,7 +58,8 @@ class LoginUserController extends Controller
             return back()->withErrors($validator)->withInput();
         }
         
-        // Bước 4: Tạo session lưu lại thông tin phiên đăng nhập?
+        // Bước 4: Tạo session lưu lại thông tin phiên đăng nhập? Xóa mật khẩu
+        unset($user->password);
         $req->session()->put('loginInfo', $user);
 
         // dd($req->session()->get('loginInfo')->ten);

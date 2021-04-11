@@ -23,8 +23,24 @@
               <div class="aa-blog-content">
                 <div class="row">
                   <div class="col-md-12 col-sm-12">
-                    <form action="createblog.html" method="post" enctype="multipart/form-data">
+                    <form action="createProducts.html" method="post" enctype="multipart/form-data">
                       @csrf
+                      <div class="form-group">
+                        <label for="tieude">Chủng loại</label>
+                        <select name="id_chung_loai" class="form-control">
+                            @foreach ($categories as $category)
+                              <option value="{{ $category->id }}"> {{ $category->ten }}</option>
+                            @endforeach
+                         </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="tieude">Loại sản phẩm</label>
+                          <select name="id_loai_san_pham" class="form-control">
+                            @foreach ($types as $type)
+                              <option value="{{ $type['id'] }}">{{ $type['ten'] }}</option>
+                            @endforeach
+                         </select>
+                      </div>
                       <div class="form-group">
                         <label for="tieude">Tiêu đề</label>
                         <input type="text" class="form-control" id="tieude" name="tieude" required=""/>
@@ -45,7 +61,7 @@
 
                       </textarea>
                       <div class="col-md-12 col-sm-12 container-button">
-                        <button type="submit" class="btn btn-success">Lưu</button>
+                        <button type="submit" class="btn btn-success">Tải lên</button>
                         <button type="reset" class="btn mt-2">Nhập lại</button>
                       </div>
                     </form>
@@ -119,10 +135,24 @@
 
         reader.readAsDataURL(input.files[0]);
     }
-}
+  }
 
-$("#file-upload").change(function(){
-    readURL(this);
-});
+  $("#file-upload").change(function(){
+      readURL(this);
+  });
+
+  $('select[name="id_chung_loai"]').change(function () {
+   $.ajax({
+        url: "{{ asset('ajax-types') }}",
+        type:'POST',
+        data: {_token : $("input[name='_token']").val(), id : $(this).val()},
+        success: function(data) {
+          $('select[name="id_loai_san_pham"]').empty();
+          $.each( data, function( key, value ) {
+              $('select[name="id_loai_san_pham"]').append('<option value="' + value.id + '">' + value.ten + '</option>');
+          });
+        }
+    });
+  });
 </script>
 @endsection

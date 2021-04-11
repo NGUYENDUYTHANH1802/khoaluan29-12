@@ -67,6 +67,8 @@
   <script src="user/js/custom.js"></script>
 
   <script src='js/tinymce/tinymce.js'></script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=462133355110539&autoLogAppEvents=1" nonce="KzORJH1D"></script>
 
   @yield('script')
 
