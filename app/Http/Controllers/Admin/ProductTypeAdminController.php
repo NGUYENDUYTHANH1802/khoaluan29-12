@@ -54,9 +54,10 @@ class ProductTypeAdminController extends Controller
 
      public function getSua($id){
         
-          $categories = loai_san_pham::all();
-          
-          return view('Admin.pages.productType.edit',compact(['categories']));
+          $productTP =  loai_san_pham::find($id);
+          $categories = chung_loai::all();
+         
+          return view('Admin.pages.productType.edit',compact(['productTP','categories']));
     }
 
     public function postSua(Request $req,$id){
@@ -78,11 +79,14 @@ class ProductTypeAdminController extends Controller
         }
         
         $productTP = loai_san_pham::find($id);
-        $user->ten = $req->ten;
+        $productTP->ten = $req->ten;
+        $productTP->id_chung_loai = $req->id_chung_loai;
        
+       // dd($productTP);
+
        
-        // $productTP->save();
-        // return redirect('admin/edit/'.$id)->with(Constant::TYPE_MSG_OK, Constant::MSG_EDIT_OK);
+        $productTP->save();
+        return redirect('admin/edit-productType/'.$id)->with(Constant::TYPE_MSG_OK, Constant::MSG_EDIT_OK);
     }
 
 
@@ -93,5 +97,11 @@ class ProductTypeAdminController extends Controller
        
         return view('admin.pages.productType.list', compact(['productTP']));
     	
+    }
+
+     public function getXoa($id){
+        $productTP = loai_san_pham::find($id);
+        $productTP -> delete();
+        return redirect('admin/product-type')->with(Constant::TYPE_MSG_OK, Constant::MSG_DELETE_OK);
     }
 }

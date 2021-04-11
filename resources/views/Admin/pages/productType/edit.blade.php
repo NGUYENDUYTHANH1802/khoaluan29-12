@@ -14,18 +14,20 @@ Sửa Loại Sản Phẩm
 		</ol>
 		<div class="row">
 			<div class="col-12">
-        <form class="contactform" action="admin/edit-productType/{{ $categories->id }}" method="post">
+        <form class="contactform" action="admin/edit-productType/{{ $productTP->id }}" method="post">
           @csrf                          
           <div class="aa-single-field mb-2">
             <label for="ten">Tên Loại Sản Phẩm <span class="required">*</span></label>
-            <input class="form-control py-4" type="text" aria-required="true" value="{{ $categories->ten }}" name="ten" >
+            <input class="form-control py-4" type="text" aria-required="true" value=" {{ $productTP->ten }}" name="ten" >
           </div>
           
           <div class="form-group">
             <label for="permission">Chủng Loại</label>
             <select name="id_chung_loai" class="form-control">
-              
-           </select>
+                 @foreach ($categories as $category)
+                  <option value='{{ $category->id }}'>{{ $category->ten }}</option>
+              @endforeach
+           </select>  
          </div>
          
          <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0 ">
