@@ -41,8 +41,8 @@ Danh sách tài khoản
                                     <td>{{ $blog->tieude }}</td>
                                     <td>{{ $blog->mota }}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-info btn-sm">Sửa</button>
-                                        <button type="button" class="btn btn-danger btn-sm">Xóa</button>
+                                        <button type="button" class="btn btn-info btn-sm " > <a class="text-white" href="admin/createblog/{{ $blog->id }}">Sửa</a> </button>
+                                        <button type="button" class="btn btn-danger btn-sm"><a href="admin/deleteBlog/{{ $blog->id }}">Xóa</a> </button>
                                     </td>
                                 </tr>  
                                 @endforeach

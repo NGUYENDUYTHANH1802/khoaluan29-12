@@ -116,8 +116,8 @@
                       <span class="fa fa-home"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Property Sale</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
+                      <h4><a href="#">Sản Phẩm</a></h4>
+                      <p>Sản phẩm đúng mẫu mã, mang đến cho quý khách những sản phẩm chất lượng tốt nhất.</p>
                     </div>
                   </div>
                 </div>
@@ -127,8 +127,8 @@
                       <span class="fa fa-check"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Property Rent</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
+                      <h4><a href="#">Chất Lượng</a></h4>
+                      <p>Chất lượng hàng hóa đảm bảo tuyệt đối, nói không với những đồ dùng kém chất lượng.</p>
                     </div>
                   </div>
                 </div>
@@ -138,8 +138,8 @@
                       <span class="fa fa-crosshairs"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Property Development</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
+                      <h4><a href="#">Uy Tín</a></h4>
+                      <p>Với những sản phẩm và dịch vụ chất lượng uy tín đối với khách hàng.</p>
                     </div>
                   </div>
                 </div>
@@ -149,8 +149,8 @@
                       <span class="fa fa-bar-chart-o"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Market Analysis</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
+                      <h4><a href="#">Giá Cả</a></h4>
+                      <p>Mua bán đồ cũ với giá cả tốt nhất thị trường.</p>
                     </div>
                   </div>
                 </div>

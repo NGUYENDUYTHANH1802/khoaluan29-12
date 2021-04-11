@@ -136,7 +136,7 @@
                                     <!-- comment threats -->
                                     <div class="col-md-12">
                                         <div class="aa-comments-area">
-                                            <h3>5 Comments</h3>
+                                            <h3>5 Comment1</h3>
                                             <div class="comments">
                                                 <ul class="commentlist">
                                                     <li>

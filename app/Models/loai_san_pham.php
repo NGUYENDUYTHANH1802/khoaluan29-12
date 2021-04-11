@@ -9,6 +9,8 @@ class loai_san_pham extends Model
 {
     use HasFactory;
     protected $table ="loai_san_pham";
+    protected $fillable = ['ten','id_chung_loai'];
+    public $timestamps = false;
     public function chungLoai()
     {
         return $this->belongsTo('App\Models\chung_loai','id_chung_loai','id');

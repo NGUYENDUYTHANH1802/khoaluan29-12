@@ -14,7 +14,7 @@
             <div class="col-md-2">
               <div class="aa-single-advance-search">
                 <select>
-                  <option value="0" selected>Category</option>
+                  <option value="0" selected>Category1</option>
                   <option value="1">Flat</option>
                   <option value="2">Land</option>
                   <option value="3">Plot</option>

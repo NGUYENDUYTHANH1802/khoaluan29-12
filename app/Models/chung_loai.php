@@ -9,6 +9,8 @@ class chung_loai extends Model
 {
     use HasFactory;
     protected $table ="chung_loai";
+    protected $fillable = ['ten'];
+    public $timestamps = false;
     public function loaiSanPham()
     {
         return $this->hasMany('App\Models\loai_san_pham','id_chung_loai','id');

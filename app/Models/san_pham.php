@@ -9,6 +9,9 @@ class san_pham extends Model
 {
     use HasFactory;
     protected $table ="san_pham";
+    protected $fillable = ['ten','trangthai', 'hinhanh', 'mota','gia','sdt','noidung'];
+
+    public $timestamps = false;
     
     public function loaiSanPham()
     {

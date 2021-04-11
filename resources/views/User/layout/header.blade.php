@@ -9,9 +9,9 @@
 
 <!-- Start header section -->
 <header id="aa-header">
-  <div class="container">
+  <div class="container ">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 ">
         <div class="aa-header-area">
           <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6">
@@ -76,7 +76,7 @@
               <li><a href="category/4">Đồ Văn Phòng</a></li>
             </ul>
           </li>
-          <li><a href="gallery.html">Loại Sản Phẩm</a></li>
+          <li><a href="gallery.html">ABCD</a></li>
            <!--
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">Bài viết <span class="caret"></span></a>
@@ -105,44 +105,44 @@
       <div class="aa-top-slider-single">
         <img src="user/img/Anh01.jpg" alt="img">
         <!-- Top slider content -->
-        <div class="aa-top-slider-content">
-          <span class="aa-top-slider-catg">Duplex</span>
+        <!-- <div class="aa-top-slider-content">
+          <span class="aa-top-slider-catg">Duplex1</span>
           <h2 class="aa-top-slider-title">1560 Square Feet</h2>
           <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
           <span class="aa-top-slider-off">30% OFF</span>
           <p class="aa-top-slider-price">$460,000</p>
           <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-        </div>
+        </div> -->
         <!-- / Top slider content -->
       </div>
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="user/img/slider/2.jpg" alt="img">
+        <img src="user/img/Anh03.jpg" alt="img">
         <!-- Top slider content -->
-        <div class="aa-top-slider-content">
+        <!-- <div class="aa-top-slider-content">
           <span class="aa-top-slider-catg">Duplex</span>
           <h2 class="aa-top-slider-title">1560 Square Feet</h2>
           <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
           <span class="aa-top-slider-off">30% OFF</span>
           <p class="aa-top-slider-price">$460,000</p>
           <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-        </div>
+        </div> -->
         <!-- / Top slider content -->
       </div>
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="user/img/slider/1.jpg" alt="img">
+        <img src="user/img/Anh02.jpg" alt="img">
         <!-- Top slider content -->
-        <div class="aa-top-slider-content">
+        <!-- <div class="aa-top-slider-content">
           <span class="aa-top-slider-catg">Duplex</span>
           <h2 class="aa-top-slider-title">1560 Square Feet</h2>
           <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Beach, Miami (USA)</p>
           <span class="aa-top-slider-off">30% OFF</span>
           <p class="aa-top-slider-price">$460,000</p>
           <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
-        </div>
+        </div> -->
         <!-- / Top slider content -->
       </div>
       <!-- / Top slider single slide -->

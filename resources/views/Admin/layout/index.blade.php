@@ -23,6 +23,34 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
+                        <main>
+                            <div class="container-fluid mt-2">
+                            @if ($errors->any())
+                                <div class="alert alert-danger alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    @foreach ($errors->all() as $error)
+                                        <span>{{ $error }}</span>
+                                        @break
+                                    @endforeach
+                                </div>
+                            @elseif (Session::has('msgOK'))
+                                <div class="alert alert-success alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <span>{{ Session::get('msgOK') }}</span>
+                                </div>
+                            @elseif (Session::has('msgINF'))
+                                <div class="alert alert-info alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <span>{{ Session::get('msgINF') }}</span>
+                                </div>
+                            @elseif (Session::has('msgERR'))
+                                <div class="alert alert-danger alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <span>{{ Session::get('msgERR') }}</span>
+                                </div>
+                            @endif
+                            </div>
+                        </main>
                         @yield('content')
                     </div>
                 </main>

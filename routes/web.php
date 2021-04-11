@@ -20,6 +20,8 @@ use App\Http\Controllers\users\BlogDetailUserController;
 
 
 
+
+
 use App\Http\Controllers\Admin\HomeAdminController; 
 use App\Http\Controllers\Admin\CategoryManagerAdminController;
 use App\Http\Controllers\Admin\PostManagementAdminController;
@@ -28,6 +30,11 @@ use App\Http\Controllers\Admin\UserManagementAdminController;
 use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\listAccountController;
 use App\Http\Controllers\Admin\BlogAdminController;
+use App\Http\Controllers\Admin\ProductAdminController;
+use App\Http\Controllers\Admin\CategoryAdminController;
+use App\Http\Controllers\Admin\ProductTypeAdminController;
+
+
 
 
 
@@ -78,6 +85,10 @@ Route::prefix('account')->group(function(){
     Route::post('/registration.html',[RegisterUserController::class, 'register']);
 
      Route::get('/registerout.html',[LoginUserController::class, 'registerout']);
+
+
+
+     
 });
 
 
@@ -111,18 +122,63 @@ Route::prefix('admin')->middleware('checkLoginAdmin')->group( function () {
 
     Route::get('/post-management', [PostManagementAdminController::class, 'index']);
 
-    Route::get('/product-management', [ProductManagementAdminController::class, 'index']);
+    // Route::get('/product-management', [ProductManagementAdminController::class, 'index']);
 
     Route::get('/user-management', [UserManagementAdminController::class, 'index']);
+   
 
-    Route::get('/add', [AccountController::class, 'add']);
+    
+    Route::get('/add.html', [AccountController::class, 'index']);
+    Route::post('/add.html', [AccountController::class, 'add']);
     Route::get('/list-account', [AccountController::class, 'list']);
+
+    Route::get('/edit/{id}',[AccountController::class,'getSua']);
+    Route::post('/edit/{id}',[AccountController::class,'postSua']);
+    Route::get('/deleteUses/{id}',[AccountController::class,'getXoa']);
+
+
+
+    Route::get('/add-category.html', [CategoryAdminController::class, 'index']);
+    Route::post('/add-category.html', [CategoryAdminController::class, 'add']);
+    Route::get('/List-category', [CategoryAdminController::class, 'list']);
+
+    Route::get('/edit-category/{id}',[CategoryAdminController::class,'getSua']);
+    Route::post('/edit-category/{id}',[CategoryAdminController::class,'postSua']);
+    Route::get('/deleteCategory/{id}',[CategoryAdminController::class,'getXoa']);
+
+
+
+
+    Route::get('/add-productType.html', [ProductTypeAdminController::class, 'index']);
+    Route::post('/add-productType.html', [ProductTypeAdminController::class, 'add']);
+    Route::get('/product-type', [ProductTypeAdminController::class, 'list']);
+
+    Route::get('/edit-productType/{id}',[ProductTypeAdminController::class,'getSua']);
+    Route::post('/edit-productType/{id}',[ProductTypeAdminController::class,'postSua']);
+    Route::get('/deleteProductType/{id}',[ProductTypeAdminController::class,'getXoa']);
+
 
     Route::get('/createblog', [BlogAdminController::class, 'index']);
     Route::post('/createblog', [BlogAdminController::class, 'create']);
     Route::get('/list-blog', [BlogAdminController::class, 'list']);
 
+    Route::get('/createblog/{id}',[BlogAdminController::class,'getSua']);
+    Route::post('/createblog/{id}',[BlogAdminController::class,'postSua']);
+    Route::get('/deleteBlog/{id}',[BlogAdminController::class,'getXoa']);
 
+    
+
+
+   
+
+    Route::get('/createProduct', [ProductAdminController::class, 'index']);
+    Route::post('/createProduct', [ProductAdminController::class, 'create']);
+    Route::get('/List-product', [ProductAdminController::class, 'list']);
+    Route::get('/deleteProduct/{id}',[ProductAdminController::class,'getXoa']);
+
+   
+
+    
 });
 
 

@@ -37,10 +37,45 @@ class BlogAdminController extends Controller
         // return redirect('blog.html');
     }
 
+    public function getSua($id){
+        
+        $user = bai_viet::find($id);
+     
+        return view('Admin.pages.blog.repair', compact(['user']));
+
+    }
+
+     public function postSua(Request $req,$id){
+        
+       $dataReq = $req->all();
+       // dd($dataReq);
+
+       
+
+        $user = bai_viet::find($id);
+        $user->tieude = $req->tieude;
+        $user->mota = $req->mota;
+        $user->hinhanh = $req->hinhanh;
+        $user->noidung = $req->noidung;
+        // dd($user);
+        
+        $user->save();
+        return redirect('admin/createblog/'.$id)->with('message', 'Đã sửa thành công.');
+    }
+
+
 
     public function list()
     {
     	$blog = bai_viet::all();
     	return view('admin.pages.blog.list', compact(['blog']));
+    }
+
+    public function getXoa($id){
+        
+        $user = bai_viet::find($id);
+        $user -> delete();
+        return redirect('admin/list-blog')->with('message', 'Đã xóa người dùng thanh công.');
+
     }
 }

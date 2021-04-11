@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Đăng Ký</title>
     <base href="{{asset('')}}">
-
+<!-- User/img/Anh01.jpg -->
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
@@ -46,7 +46,8 @@
   <section id="aa-signin">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" >
+
           <div class="aa-signin-area">
             <div class="aa-signin-form">
                @if ($errors->any())
