@@ -23,6 +23,15 @@
               <div class="aa-blog-content">
                 <div class="row">
                   <div class="col-md-12 col-sm-12">
+                    @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissable">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                      @foreach ($errors->all() as $error)
+                      <span>{{ $error }}</span>
+                      @break
+                      @endforeach
+                    </div>
+                    @endif
                     <form action="createProducts.html" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="form-group">
@@ -43,21 +52,26 @@
                       </div>
                       <div class="form-group">
                         <label for="tieude">Tiêu đề</label>
-                        <input type="text" class="form-control" id="tieude" name="tieude" required=""/>
+                        <input type="text" class="form-control" id="tieude" name="tieude" value="{{ old('tieude') }}" aria-required="true"/>
+
                       </div>
                       <div class="form-group">
                         <label for="mota">Mô tả</label>
-                        <input type="text" class="form-control" id="mota" name="mota" required="" />
+                        <input type="text" class="form-control" id="mota" name="mota" value="{{ old('mota') }}" aria-required="true" />
+                      </div>
+                      <div class="form-group">
+                        <label for="trangthai">Trạng Thái</label>
+                        <input type="text" class="form-control" id="trangthai" name="trangthai" value="{{ old('trangthai') }}" aria-required="true" />
                       </div>
                       <div class="form-group">
                         <label for="hinhanh">Hình ảnh</label>
-                        <input id="file-upload" type="file" name="hinhanh" required="" />
-                        <div id="preview">
-                          <img src="#" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
+                        <input id="file-upload" type="file" name="hinhanh" value="{{ old('hinhanh') }}" aria-required="true" />
+                        <div id="preview" >
+                          <img  src="#" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
 
                         </div>                                        
                       </div>
-                      <textarea class="mb-2" cols="30" rows="50" id="blog_content" name="noidung" required="">
+                      <textarea class="mb-2" cols="30" rows="50" id="blog_content" name="noidung"  aria-required="true">
 
                       </textarea>
                       <div class="col-md-12 col-sm-12 container-button">

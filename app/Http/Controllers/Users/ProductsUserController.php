@@ -8,6 +8,7 @@ use App\Models\san_pham;
 use Session; 
 use App\Models\chung_loai;
 use App\Models\loai_san_pham;
+use Validator;
 
 
 class ProductsUserController extends Controller
@@ -17,7 +18,7 @@ class ProductsUserController extends Controller
      */
     public function index()
     {
-        $loginId = Session::get('loginInfo')->id;
+        $loginId = Session::get('loginInfo');
     	$products = san_pham::where('id_nguoi_dung', $loginId)->paginate(6);
         return view('user.pages.products', compact(['products']));
     }
@@ -37,9 +38,40 @@ class ProductsUserController extends Controller
 
     public function postCreate(Request $request)
     {
-        $dataSave = $request->all();
-        $dataSave['trangthai'] = 'Chưa bán';
-        dd($request->all());
+        // $dataSave = $request->all();
+        // $dataSave['trangthai'] = 'Chưa bán';
+        // dd($request->all());
+        $dataReq = $request->all();
+        // dd($dataReq);
+        $rules = [
+           'tieude' =>'required|max:100',
+           'mota' =>'required|max:1000',
+           'trangthai' =>'required',
+           'hinhanh' =>'required',
+           'noidung' =>'required',
+            
+        ];
+
+        $messages = [
+            'tieude.required' => 'Vui lòng nhập tiêu đề!',
+            'tieude.max' => 'Tên tiêu đề không được quá :max ký tự!',
+            'mota.required' => 'Vui lòng nhập mô tả!',
+            'mota.max' => 'Mô tả không được quá :max ký tự!',
+            'trangthai.required' => 'Vui lòng nhập trạng thái!',
+            'hinhanh.required' => 'Vui lòng chọn hình ảnh!',
+            'noidung.required' => 'Vui lòng nhập nội dung!',
+
+        ];
+
+        $validator = Validator::make($dataReq, $rules, $messages);
+      
+       
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
+        dd($validator);
     	// $blog = new bai_viet();
 
      //   	$blog->mota = $request->mota;
@@ -56,7 +88,7 @@ class ProductsUserController extends Controller
      //    }
      //    $blog->save();
 
-        return redirect('blog.html');
+        return redirect('');
     }
 
     public function view($id)

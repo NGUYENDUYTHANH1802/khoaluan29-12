@@ -1,9 +1,12 @@
+
 @extends('user.layout.index')
 
 @section('content')
-  @include('user.layout.search')
+
+@include('user.layout.search')
 
   <!-- About us -->
+   
   <section id="aa-about-us">
     <div class="container">
       <div class="row">
@@ -54,7 +57,7 @@
             @foreach ($sanPhamNoiBat as $spNoiBat)
             <div class="col-md-4">
               <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
+                <a href="detail/{{ $spNoiBat->id }}" class="aa-properties-item-img">
                   <img src="User/img/item/{{$spNoiBat->hinhanh}}" alt="img">
                 </a>
       
@@ -74,14 +77,14 @@
            
                 <div class="aa-properties-item-content">
                   <div class="aa-properties-about">
-                    <h3><a href="#">{{ \Illuminate\Support\Str::limit($spNoiBat->ten, 25, '...') }}</a></h3>
+                    <h3><a href="detail/{{ $spNoiBat->id }}">{{ \Illuminate\Support\Str::limit($spNoiBat->ten, 25, '...') }}</a></h3>
                     <p>{{ \Illuminate\Support\Str::limit($spNoiBat->mota, 39, '...') }}</p>                   
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
                       {{ number_format($spNoiBat->gia) }}₫
                     </span>
-                    <a href="#" class="aa-secondary-btn">{{ $spNoiBat->sdt}}</a>
+                    <a href="javascript::;" class="aa-secondary-btn">{{ $spNoiBat->sdt}}</a>
                   </div>
                 </div>
               </article>
@@ -116,7 +119,7 @@
                       <span class="fa fa-home"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Sản Phẩm</a></h4>
+                      <h4><a href="javascript::;">Sản Phẩm</a></h4>
                       <p>Sản phẩm đúng mẫu mã, mang đến cho quý khách những sản phẩm chất lượng tốt nhất.</p>
                     </div>
                   </div>
@@ -127,7 +130,7 @@
                       <span class="fa fa-check"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Chất Lượng</a></h4>
+                      <h4><a href="javascript::;">Chất Lượng</a></h4>
                       <p>Chất lượng hàng hóa đảm bảo tuyệt đối, nói không với những đồ dùng kém chất lượng.</p>
                     </div>
                   </div>
@@ -138,7 +141,7 @@
                       <span class="fa fa-crosshairs"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Uy Tín</a></h4>
+                      <h4><a href="javascript::;">Uy Tín</a></h4>
                       <p>Với những sản phẩm và dịch vụ chất lượng uy tín đối với khách hàng.</p>
                     </div>
                   </div>
@@ -149,7 +152,7 @@
                       <span class="fa fa-bar-chart-o"></span>
                     </div>
                     <div class="aa-single-service-content">
-                      <h4><a href="#">Giá Cả</a></h4>
+                      <h4><a href="javascript::;">Giá Cả</a></h4>
                       <p>Mua bán đồ cũ với giá cả tốt nhất thị trường.</p>
                     </div>
                   </div>
@@ -199,13 +202,15 @@
                 <li>               
                   <div class="aa-single-agents">
                     <div class="aa-agents-img">
-                      <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image">
+                      <a href="detail/{{ $spNgauNhien->id }}">
+                        <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image">
+                      </a>    
                     </div>
                     <div class="aa-agetns-info">
-                      <h4><a href="#">{{ $spNgauNhien->nguoiDung->ten}}</a></h4>
+                      <h4><a href="javascript::;">{{ $spNgauNhien->nguoiDung->ten}}</a></h4>
                       <span>{{ number_format($spNgauNhien->gia) }}₫</span>
                       <div class="aa-agent-social">
-                        <a href="#" style="border: none;"> {{ $spNgauNhien->sdt}} </a>
+                        <a href="javascript::;" style="border: none;"> {{ $spNgauNhien->sdt}} </a>
                       </div>
                     </div>
                   </div>         

@@ -63,7 +63,7 @@
             </a>
             <div class="collapse" id="san-pham" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="admin/createProduct">Thêm mới</a>
+                   
                     <a class="nav-link" href="admin/List-product">Danh Sách</a>
                 </nav>
             </div>

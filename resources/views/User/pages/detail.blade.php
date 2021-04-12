@@ -14,7 +14,7 @@
                                     <div class="col-md-12">
                                         <article class="aa-blog-single aa-blog-details">
                                             <figure class="aa-blog-img">
-                                                <a href="#"><img alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
+                                                <a href="javascript::;"><img alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
                                                 <span class="aa-date-tag">
                                                     @if ($detail->trangthai === 'Chưa Bán')
                                                     <div class="aa-tag for-sale">
@@ -39,7 +39,7 @@
                                                     <a class="aa-blog-comments" href="javascript::;"><i class=""></i>{{ number_format($detail->gia) }}₫</a>
                                                 </div>
                                             </div>
-                                            {!! $detail->noidung !!}
+                                            {!! $detail->mota !!}
                                         </article>
                                     </div>
                                     <!-- Post tags -->
@@ -78,15 +78,30 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <article class="aa-blog-single">
                                                             <figure class="aa-blog-img">
-                                                                <a href="#"><img src="User/img/item/{{ $dt->hinhanh }}" alt="img"></a>
-                                                                <span class="aa-date-tag">15 April, 16</span>
+                                                                <a href="detail/{{ $dt->id }}"><img src="User/img/item/{{ $dt->hinhanh }}" alt="img"></a>
+                                                                <span class="aa-date-tag">
+                                                                   @if ($dt->trangthai === 'Chưa Bán')
+                                                                   <div class="aa-tag for-sale">
+                                                                    {{ $dt->trangthai }}
+                                                                </div>
+                                                                @elseif ( $dt->trangthai === 'Đang Bán')
+                                                                <div class="aa-tag for-rent">
+                                                                    {{ $dt->trangthai }}
+                                                                </div>
+                                                                @else
+                                                                <div class="aa-tag sold-out">
+                                                                    {{ $dt->trangthai }}
+                                                                </div>
+                                                                @endif
+
+                                                                </span>
                                                             </figure>
                                                             <div class="aa-blog-single-content">
-                                                                <h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio est quaerat magnam exercitationem voluptas, voluptatem sed quam ab laborum voluptatum tempore dolores itaque, molestias vitae.</p>
+                                                                <h3><a href="javascript::;">{{ $dt->ten }}</a></h3>
+                                                                <p>{{ $dt->mota }}</p>
                                                                 <div class="aa-blog-single-bottom">
-                                                                    <a href="#" class="aa-blog-author"><i class="fa fa-user"></i> Admin</a>
-                                                                    <a href="#" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
+                                                                    <a href="javascript::;" class="aa-blog-author"><i class="fa fa-user"></i>  {{ $dt->nguoiDung->ten }}</a>
+                                                                    <a href="javascript::;" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
                                                                 </div>
                                                             </div>
                                                         </article>

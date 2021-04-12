@@ -58,7 +58,7 @@ Danh sách Sản Phẩm
                                     <td>{{ $pr->noidung }}</td>
                                      <td>{{ $pr->nguoidung->ten }}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn btn-info btn-sm mb-2"> <a class="text-white" href="admin/repair/{{ $pr->id }}"> Sửa</a></button>
+                                       
                                         <button type="button" class="btn btn-danger btn-sm"><a class="text-white href="admin/deleteProduct/{{ $pr->id }}">
                                             Xóa
                                         </a> </button>

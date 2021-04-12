@@ -51,7 +51,7 @@ class ProductAdminController extends Controller
         
         $product = san_pham::find($id);
         $product -> delete();
-        return redirect('admin/pages/product/list')->with('message', 'Đã xóa sản phẩm thanh công.');
+        return redirect('admin/pages/product/list')->with('message', 'Đã xóa sản phẩm thành công.');
 
     }
 }
