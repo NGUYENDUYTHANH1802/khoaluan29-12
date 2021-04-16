@@ -1,5 +1,9 @@
 @extends('user.layout.index')
 
+@section('title')
+    Bài Viết
+@endsection
+
 @section('content')
 
   <!-- Start Blog  -->
@@ -26,15 +30,29 @@
                     <div class="col-md-4 col-sm-4">
                       <article class="aa-blog-single">
                         <figure class="aa-blog-img">
-                          <a href="blogdetail.html/{{ $product->id }}"><img alt="img" src="User/img/item/{{ $product->hinhanh }}"></a>
-                          <span class="aa-date-tag">{{ date("d/m/Y", strtotime($product->created_at ) )}}</span>
+                          <a href="EditUserProduct.html/{{ $product->id }}"><img width="360px" height="214px" alt="img" src="User/img/item/{{ $product->hinhanh }}"></a>
+                          <span class="aa-date-tag">
+                            @if ($product->trangthai === 'Chưa Bán')
+                            <div class="aa-tag for-sale">
+                              {{ $product->trangthai }}
+                            </div>
+                            @elseif ( $product->trangthai === 'Đang Bán')
+                            <div class="aa-tag for-rent">
+                              {{ $product->trangthai }}
+                            </div>
+                            @else
+                            <div class="aa-tag sold-out">
+                              {{ $product->trangthai }}
+                            </div>
+                            @endif
+                          </span>
                         </figure>
                         <div class="aa-blog-single-content">
-                          <h3><a href="blogdetail.html">{{ $product->tieude }}</a></h3>
-                          <p>{{ $product->mota }}</p>
+                           <h3><a href="detail/{{ $product->id }}">{{ \Illuminate\Support\Str::limit($product->ten, 25, '...') }}</a></h3> 
+                          <p>{{ \Illuminate\Support\Str::limit($product->mota, 39, '...') }}</p>
                           <div class="aa-blog-single-bottom">
-                            <a class="aa-blog-author" href="#"><i class="fa fa-user"></i> {{ $product->nguoiDung->ten }}</a>
-                            <a class="aa-blog-comments" href="#"><i class="fa fa-comment-o"></i>6</a>
+                            <a class="aa-blog-author" href="javascript::;"><i class="fa fa-user"></i> {{ $product->nguoiDung->ten }}</a>
+                            <a class="aa-blog-comments" href="javascript::;"><i class="fa fa-comment-o"></i>6</a>
                           </div>
                         </div>                   
                       </article>

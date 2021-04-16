@@ -17,6 +17,8 @@ use App\Http\Controllers\users\typeUserController;
 use App\Http\Controllers\users\DetailUserController;
 use App\Http\Controllers\users\ProductsUserController;
 use App\Http\Controllers\users\BlogDetailUserController;
+use App\Http\Controllers\users\EditProductUserController;
+use App\Http\Controllers\users\SeachController;
 
 
 
@@ -74,7 +76,15 @@ Route::prefix('')->group(function () {
     Route::post('/ajax-types', [ProductsUserController::class, 'ajaxTypes']);
     Route::post('createProducts.html',[ProductsUserController::class, 'postCreate']);
     Route::get('/Productdetail.html/{id}', [ProductsUserController::class, 'view']);
-    
+
+
+    Route::get('/EditUserProduct.html/{id}', [EditProductUserController::class, 'index']);
+    Route::post('/ajax-types', [EditProductUserController::class, 'ajaxTypes']);
+    Route::post('/EditUserProduct.html/{id}', [EditProductUserController::class, 'postProduct']);
+    Route::get('/deleteUserProduct/{id}',[EditProductUserController::class,'getXoa']);
+
+
+    Route::get('/timkiem', [SeachController::class, 'postTimKiem']);
 });
 
 Route::prefix('account')->group(function(){

@@ -1,4 +1,7 @@
 @extends('user.layout.index')
+@section('title')
+    Chi tiết sản phẩm
+@endsection
 
 @section('content')
 <!-- Start Blog  -->
@@ -14,6 +17,7 @@
                                     <div class="col-md-12">
                                         <article class="aa-blog-single aa-blog-details">
                                             <figure class="aa-blog-img">
+                                                <!-- <a href="javascript::;"><img width="1920px" height="1280px" alt="img" src="User/img/item/{{ $detail->hinhanh }}"></a> -->
                                                 <a href="javascript::;"><img alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
                                                 <span class="aa-date-tag">
                                                     @if ($detail->trangthai === 'Chưa Bán')
@@ -58,15 +62,15 @@
                                         <div class="aa-properties-social">
                                             <ul>
                                                 <li>Chia sẽ</li>
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                                <li><a href="javascript::;"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="javascript::;"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="javascript::;"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="javascript::;"><i class="fa fa-pinterest"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <!-- Related blog post -->
-                                    <div class="col-md-12">
+                                    <div class="col-md-12">Sản Phẩm Nổi Bật
                                         <div class="aa-blog-related-post">
                                             <div class="aa-title">
                                                 <h2>Sản phẩm tương tự</h2>
@@ -78,7 +82,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <article class="aa-blog-single">
                                                             <figure class="aa-blog-img">
-                                                                <a href="detail/{{ $dt->id }}"><img src="User/img/item/{{ $dt->hinhanh }}" alt="img"></a>
+                                                                <a href="detail/{{ $dt->id }}"><img width="360px" height="214px" src="User/img/item/{{ $dt->hinhanh }}" alt="img"></a>
                                                                 <span class="aa-date-tag">
                                                                    @if ($dt->trangthai === 'Chưa Bán')
                                                                    <div class="aa-tag for-sale">
@@ -97,8 +101,8 @@
                                                                 </span>
                                                             </figure>
                                                             <div class="aa-blog-single-content">
-                                                                <h3><a href="javascript::;">{{ $dt->ten }}</a></h3>
-                                                                <p>{{ $dt->mota }}</p>
+                                                                <h3><a href="javascript::;">{{ \Illuminate\Support\Str::limit($dt->ten, 25, '...') }}</a></h3>
+                                                                <p>{{ \Illuminate\Support\Str::limit($dt->mota, 39, '...') }}</p>
                                                                 <div class="aa-blog-single-bottom">
                                                                     <a href="javascript::;" class="aa-blog-author"><i class="fa fa-user"></i>  {{ $dt->nguoiDung->ten }}</a>
                                                                     <a href="javascript::;" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>

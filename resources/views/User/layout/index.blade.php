@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trang chủ | @yield('title')</title>
+  <title> @yield('title')</title>
   <base href="{{asset('')}}">
   <!-- Favicon -->
   <link rel="shortcut icon" href="user/img/favicon.ico" type="image/x-icon">

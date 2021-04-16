@@ -1,6 +1,8 @@
 @extends('user.layout.index')
 
-
+@section('title')
+    Thêm mới sản phẩm
+@endsection
 @section('css')
 <style>
   .container-button {
@@ -32,10 +34,11 @@
                       @endforeach
                     </div>
                     @endif
+
                     <form action="createProducts.html" method="post" enctype="multipart/form-data">
                       @csrf
                       <div class="form-group">
-                        <label for="tieude">Chủng loại</label>
+                        <label for="chungloai">Chủng loại</label>
                         <select name="id_chung_loai" class="form-control">
                             @foreach ($categories as $category)
                               <option value="{{ $category->id }}"> {{ $category->ten }}</option>
@@ -43,7 +46,7 @@
                          </select>
                       </div>
                       <div class="form-group">
-                        <label for="tieude">Loại sản phẩm</label>
+                        <label for="loaisanpham">Loại sản phẩm</label>
                           <select name="id_loai_san_pham" class="form-control">
                             @foreach ($types as $type)
                               <option value="{{ $type['id'] }}">{{ $type['ten'] }}</option>
@@ -51,29 +54,37 @@
                          </select>
                       </div>
                       <div class="form-group">
-                        <label for="tieude">Tiêu đề</label>
-                        <input type="text" class="form-control" id="tieude" name="tieude" value="{{ old('tieude') }}" aria-required="true"/>
+                        <label for="ten">Tiêu đề</label>
+                        <input type="text" class="form-control" id="ten" name="ten" value="{{ old('ten') }}" aria-required="true"/>
+                      </div>
 
-                      </div>
-                      <div class="form-group">
-                        <label for="mota">Mô tả</label>
-                        <input type="text" class="form-control" id="mota" name="mota" value="{{ old('mota') }}" aria-required="true" />
-                      </div>
-                      <div class="form-group">
-                        <label for="trangthai">Trạng Thái</label>
-                        <input type="text" class="form-control" id="trangthai" name="trangthai" value="{{ old('trangthai') }}" aria-required="true" />
-                      </div>
                       <div class="form-group">
                         <label for="hinhanh">Hình ảnh</label>
                         <input id="file-upload" type="file" name="hinhanh" value="{{ old('hinhanh') }}" aria-required="true" />
                         <div id="preview" >
                           <img  src="#" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
-
                         </div>                                        
                       </div>
-                      <textarea class="mb-2" cols="30" rows="50" id="blog_content" name="noidung"  aria-required="true">
 
+                      <div class="form-group">
+                        <label for="mota">Mô tả</label>
+                        <input type="text" class="form-control" id="mota" name="mota" value="{{ old('mota') }}" aria-required="true" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="gia">giá</label>
+                        <input type="text" class="form-control" id="gia" name="gia" value="{{ old('gia') }}" aria-required="true" />
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="sdt">Số Điện Thoại</label>
+                        <input type="text" class="form-control" id="sdt" name="sdt" value="{{ old('sdt') }}" aria-required="true" />
+                      </div>
+
+                      <textarea class="mb-2" cols="30" rows="50" id="blog_content" name="noidung"  aria-required="true" >
+                        {{ old('noidung') }}
                       </textarea>
+
                       <div class="col-md-12 col-sm-12 container-button">
                         <button type="submit" class="btn btn-success">Tải lên</button>
                         <button type="reset" class="btn mt-2">Nhập lại</button>

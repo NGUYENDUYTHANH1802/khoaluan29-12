@@ -15,7 +15,7 @@ class typeUserController extends Controller
     public function index(Request $req){
         $products = san_pham::where('id_loai_san_pham', $req->idType)->paginate(3);
         // dd($products);
-        return view('User.pages.type',compact(['products']));
+        return view('User.pages.type', compact(['products']));
     }
 
     public function product($id)

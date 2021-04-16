@@ -1,5 +1,9 @@
 @extends('user.layout.index')
 
+@section('title')
+    Sản Phẩm
+@endsection
+
 @section('content')
 <section id="aa-blog">
     <div class="container">
@@ -14,7 +18,7 @@
                                     <div class="col-md-4 col-sm-4">
                                         <article class="aa-blog-single">
                                             <figure class="aa-blog-img">
-                                                <a href="#"><img alt="img" src="user/img/item/{{ $pd->hinhanh }}"></a>
+                                                <a href="detail/{{ $pd->id }}"><img width="360px" height="214px" alt="img" src="user/img/item/{{ $pd->hinhanh }}"></a>
                                                 <span class="aa-date-tag">
                                                     @if ($pd->trangthai === 'Chưa Bán')
                                                     <div class="aa-tag for-sale">
@@ -32,13 +36,13 @@
                                                 </span>
                                             </figure>
                                             <div class="aa-blog-single-content">
-                                                <h3><a href="#">{{ \Illuminate\Support\Str::limit($pd->ten, 25, '...') }}</a></h3>
+                                                <h3><a href="javascript::;">{{ \Illuminate\Support\Str::limit($pd->ten, 25, '...') }}</a></h3>
                                                 <p>{{ \Illuminate\Support\Str::limit($pd->mota, 40, '...') }}</p>
                                                 <div class="aa-blog-single-bottom">
                                                     <!-- <a class="aa-blog-author" href="#"><i class="fa fa-user"></i>{{ number_format($pd->gia) }}₫</a> -->
-                                                    <span class="aa-blog-author" href="#">{{ number_format($pd->gia) }}₫</span>
+                                                    <span class="aa-blog-author" href="javascript::;">{{ number_format($pd->gia) }}₫</span>
                                                     <!-- <a class="aa-blog-comments" href="#"><i class="fa fa-comment-o"></i>6</a> -->
-                                                    <a class="aa-blog-comments aa-secondary-btn" href="#">{{ $pd->sdt}}</a>
+                                                    <a class="aa-blog-comments aa-secondary-btn" href="javascript::;">{{ $pd->sdt}}</a>
                                                 </div>
                                             </div>
                                         </article>
@@ -58,7 +62,7 @@
                                                     </li>
                                                     <li><a href="#">1</a></li>
                                                     <li><a href="#">2</a></li>
-                                                    <li class="active"><a href="#">3</a></li>
+                                                    <li class="active"><a href="#">22</a></li>
                                                     <li><a href="#">4</a></li>
                                                     <li><a href="#">5</a></li>
                                                     <li>

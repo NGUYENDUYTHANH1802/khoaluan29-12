@@ -1,5 +1,8 @@
 @extends('user.layout.index')
 
+@section('title')
+    chủng loại
+@endsection
 @section('content')
 @include('user.layout.search')
 <!-- Start Properties  -->
@@ -22,7 +25,7 @@
                             <li>
                                 <article class="aa-properties-item">
                                     <a class="aa-properties-item-img" href="detail/{{ $productID->id }}">
-                                        <img alt="img" src="user/img/item/{{ $productID->hinhanh }}">
+                                        <img width="360px" height="214px" alt="img" src="user/img/item/{{ $productID->hinhanh }}">
                                     </a>
 
                                     @if ($productID->trangthai === 'Chưa Bán')

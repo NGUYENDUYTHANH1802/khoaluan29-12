@@ -1,3 +1,4 @@
+
 <!-- Pre Loader -->
 
 <div id="aa-preloader-area">
@@ -66,14 +67,13 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li class="active"><a href="home">Trang Chủ</a></li>
+          <li class=""><a href="home">Trang Chủ</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">Chủng Loại <span class="caret"></span></a>
+            <a class="dropdown-toggle active" data-toggle="dropdown" href="properties.html">Chủng Loại <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="category/1">Đồ Gia Dụng</a></li>
-              <li><a href="category/2">Đồ Điện</a></li>
-              <li><a href="category/3">Đồ Miễn Phí</a></li>
-              <li><a href="category/4">Đồ Văn Phòng</a></li>
+               @foreach ($shareUS_chung_loai as $share_chung_loai)
+                <li><a href="category/{{ $share_chung_loai->id }}">{{ $share_chung_loai->ten }}</a></li>
+              @endforeach
             </ul>
           </li>
           <li><a href="gallery.html">ABCD</a></li>
@@ -86,7 +86,11 @@
             </ul>
           </li>
           -->
-          <li><a href="products.html">Bài viết</a></li>
+          <li> 
+               @if(Session::has('loginInfo'))
+                  <a href="products.html">  Bài viết </a>
+              @endif 
+          </li>
           <li><a href="contact.html">Liên hệ</a></li>
         </ul>
       </div>

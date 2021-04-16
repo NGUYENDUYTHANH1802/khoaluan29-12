@@ -7,10 +7,10 @@ Danh sách Sản Phẩm
 @section('content')
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Danh sách Sản Phẩm</h1>
+        <h1 class="mt-4">Danh Sách Chủng Loại</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-            <li class="breadcrumb-item active">Danh sách Sản Phẩm</li>
+            <li class="breadcrumb-item active">Danh Sách Chủng Loại</li>
         </ol>
         <div class="row">
             <div class="col-12">

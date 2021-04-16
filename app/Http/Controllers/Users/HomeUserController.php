@@ -13,6 +13,7 @@ class HomeUserController extends Controller
     public function index(){
         $sanPhamNoiBat = san_pham::inRandomOrder()->limit(9)->get();
         $sanPhamNgauNhien = san_pham::inRandomOrder()->limit(12)->get();
+        
         return view('user.pages.home', compact(['sanPhamNoiBat','sanPhamNgauNhien']));
     }
 }

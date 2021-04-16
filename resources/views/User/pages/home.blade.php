@@ -1,6 +1,10 @@
 
 @extends('user.layout.index')
 
+@section('title')
+    Trang Chủ
+@endsection
+
 @section('content')
 
 @include('user.layout.search')
@@ -58,7 +62,7 @@
             <div class="col-md-4">
               <article class="aa-properties-item">
                 <a href="detail/{{ $spNoiBat->id }}" class="aa-properties-item-img">
-                  <img src="User/img/item/{{$spNoiBat->hinhanh}}" alt="img">
+                  <img width="360px" height="214px" h src="user/img/img-detail/{{$spNoiBat->hinhanh}}" alt="img">
                 </a>
       
                   @if ($spNoiBat->trangthai === 'Chưa Bán')
@@ -203,7 +207,8 @@
                   <div class="aa-single-agents">
                     <div class="aa-agents-img">
                       <a href="detail/{{ $spNgauNhien->id }}">
-                        <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image">
+                        <!-- <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image"> -->
+                        <img src="user/img/img-detail/{{ $spNgauNhien->hinhanh }}" alt="agent member image">
                       </a>    
                     </div>
                     <div class="aa-agetns-info">
@@ -226,138 +231,5 @@
   </section>
   <!-- / Our Agent Section-->
 
-  <!-- Client Testimonial -->
-  <section id="aa-client-testimonial">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-client-testimonial-area">
-            <div class="aa-title">
-              <h2>What Client Say</h2>
-              <span></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eaque quas debitis animi ipsum, veritatis!</p>
-            </div>
-            <!-- testimonial content -->
-            <div class="aa-testimonial-content">
-              <!-- testimonial slider -->
-              <ul class="aa-testimonial-slider">
-                <li>
-                  <div class="aa-testimonial-single">
-                    <div class="aa-testimonial-img">
-                      <img src="user/img/testimonial-1.png" alt="testimonial img">
-                    </div>
-                    <div class="aa-testimonial-info">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
-                    </div>
-                    <div class="aa-testimonial-bio">
-                      <p>David Muller</p>
-                      <span>Web Designer</span>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="aa-testimonial-single">
-                    <div class="aa-testimonial-img">
-                      <img src="user/img/testimonial-3.png" alt="testimonial img">
-                    </div>
-                    <div class="aa-testimonial-info">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
-                    </div>
-                    <div class="aa-testimonial-bio">
-                      <p>David Muller</p>
-                      <span>Web Designer</span>
-                    </div>
-                  </div>
-                </li>
-                 <li>
-                  <div class="aa-testimonial-single">
-                    <div class="aa-testimonial-img">
-                      <img src="user/img/testimonial-2.png" alt="testimonial img">
-                    </div>
-                    <div class="aa-testimonial-info">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate consequuntur ducimus cumque iure modi nesciunt recusandae eligendi vitae voluptatibus, voluptatum tempore, ipsum nisi perspiciatis. Rerum nesciunt fuga ab natus, dolorem?</p>
-                    </div>
-                    <div class="aa-testimonial-bio">
-                      <p>David Muller</p>
-                      <span>Web Designer</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Client Testimonial -->
-
-  <!-- Client brand -->
-  <!-- <section id="aa-client-brand">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-client-brand-area">
-            <ul class="aa-client-brand-slider">
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-1.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-2.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-3.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-5.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-4.png" alt="brand image">
-                </div>
-              </li>
-               <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-1.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-2.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-3.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-5.png" alt="brand image">
-                </div>
-              </li>
-              <li>
-                <div class="aa-client-single-brand">
-                  <img src="user/img/client-brand-4.png" alt="brand image">
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- / Client brand -->
-
- 
-  <!-- / Latest blog -->
 
 @endsection
