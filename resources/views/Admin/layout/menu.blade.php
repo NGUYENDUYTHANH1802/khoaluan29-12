@@ -2,7 +2,7 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Thống kê</div>
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="home.html">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                TRANG CHỦ
             </a>
@@ -43,7 +43,7 @@
                 </nav>
             </div>
 
-              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
+             <!--  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                 Bài viết
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -53,7 +53,7 @@
                     <a class="nav-link" href="admin/createblog">Thêm mới</a>
                     <a class="nav-link" href="admin/list-blog">Danh Sách</a>
                 </nav>
-            </div>
+            </div> -->
 
 
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#san-pham" aria-expanded="false" aria-controls="san-pham">
@@ -70,7 +70,7 @@
 
               
 
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+            <!-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                 Thảo Luận
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -110,7 +110,7 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Tables
             </a>
-        </div>
+        </div> -->
     </div>
     <!-- <div class="sb-sidenav-footer">
         <div class="small">Logged in as:</div>

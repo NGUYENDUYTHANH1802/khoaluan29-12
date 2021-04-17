@@ -18,7 +18,7 @@
                                         <article class="aa-blog-single aa-blog-details">
                                             <figure class="aa-blog-img">
                                                 <!-- <a href="javascript::;"><img width="1920px" height="1280px" alt="img" src="User/img/item/{{ $detail->hinhanh }}"></a> -->
-                                                <a href="javascript::;"><img alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
+                                                <a href="javascript::;"><img width="1200px" height="600px" alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
                                                 <span class="aa-date-tag">
                                                     @if ($detail->trangthai === 'Chưa Bán')
                                                     <div class="aa-tag for-sale">

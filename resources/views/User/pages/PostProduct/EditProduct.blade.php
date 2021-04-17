@@ -50,6 +50,9 @@
                             @endforeach
                          </select>
                       </div>
+
+                     
+
                       <div class="form-group">
                         <label for="ten">Tiêu đề</label>
                         <input type="text" class="form-control" id="ten" name="ten" value="{{ \Illuminate\Support\Str::limit($EditProduct->ten, 25, '...') }}" aria-required="true"/>

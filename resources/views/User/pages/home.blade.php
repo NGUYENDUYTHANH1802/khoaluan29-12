@@ -208,7 +208,7 @@
                     <div class="aa-agents-img">
                       <a href="detail/{{ $spNgauNhien->id }}">
                         <!-- <img src="user/img/agents/{{$spNgauNhien->hinhanh}}" alt="agent member image"> -->
-                        <img src="user/img/img-detail/{{ $spNgauNhien->hinhanh }}" alt="agent member image">
+                        <img width="265px" height="160px" src="user/img/img-detail/{{ $spNgauNhien->hinhanh }}" alt="agent member image">
                       </a>    
                     </div>
                     <div class="aa-agetns-info">

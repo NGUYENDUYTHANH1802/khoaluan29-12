@@ -76,7 +76,7 @@
               @endforeach
             </ul>
           </li>
-          <li><a href="gallery.html">ABCD</a></li>
+          <!-- <li><a href="gallery.html">ABCD</a></li> -->
            <!--
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="blog-archive.html">Bài viết <span class="caret"></span></a>

@@ -1,11 +1,15 @@
 @extends('admin.layout.index')
 
+@section('title')
+    Quản Trị Viên
+@endsection
+
 @section('content')
 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Thống Kê</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Thống Kê</li>
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
