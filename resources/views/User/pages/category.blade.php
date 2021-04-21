@@ -25,7 +25,7 @@
                             <li>
                                 <article class="aa-properties-item">
                                     <a class="aa-properties-item-img" href="detail/{{ $productID->id }}">
-                                        <img width="360px" height="214px" alt="img" src="user/img/item/{{ $productID->hinhanh }}">
+                                        <img width="360px" height="214px" alt="img" src="user/img/img-detail/{{ $productID->hinhanh }}">
                                     </a>
 
                                     @if ($productID->trangthai === 'Chưa Bán')
@@ -93,7 +93,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <a  href="detail/{{ $spPhoBien->id }}">
-                                    <img class="media-object" src="User/img/item/{{ $spPhoBien->hinhanh }}" alt="img">
+                                    <img class="media-object" src="user/img/img-detail/{{ $spPhoBien->hinhanh }}" alt="img">
                                 </a>
                             </div>  
                             <div class="media-body">

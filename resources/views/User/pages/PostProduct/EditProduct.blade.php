@@ -1,6 +1,8 @@
 @extends('user.layout.index')
 
-
+@section('title')
+  Sửa sản phẩm
+@endsection
 @section('css')
 <style>
   .container-button {
@@ -34,7 +36,7 @@
                     @endif
                     <form action="EditUserProduct.html/{{ $EditProduct->id }}" method="post" enctype="multipart/form-data">
                       @csrf
-                     <div class="form-group">
+                      <div class="form-group">
                         <label for="chungloai">Chủng loại</label>
                         <select name="id_chung_loai" class="form-control">
                             @foreach ($categories as $category)
@@ -42,6 +44,8 @@
                             @endforeach
                          </select>
                       </div>
+
+
                       <div class="form-group">
                         <label for="loaisanpham">Loại sản phẩm</label>
                           <select name="id_loai_san_pham" class="form-control">
@@ -51,8 +55,15 @@
                          </select>
                       </div>
 
-                     
-
+                      <div class="form-group">
+                        <label for="permission">Trạng thái</label>
+                        <select name="trangthai" id="" class="form-control">
+                          
+                          <option value="Chưa Bán" {{ $EditProduct->trangthai === "Chưa Bán" ? "selected" : "" }}>Chưa Bán</option> 
+                          <option value="Đang Bán" {{ $EditProduct->trangthai === "Đang Bán" ? "selected" : "" }}>Đang bán</option>
+                           <option value="Đã Bán" {{ $EditProduct->trangthai === "Đã Bán" ? "selected" : "" }}>Đã bán</option>   
+                        </select>
+                      </div>
                       <div class="form-group">
                         <label for="ten">Tiêu đề</label>
                         <input type="text" class="form-control" id="ten" name="ten" value="{{ \Illuminate\Support\Str::limit($EditProduct->ten, 25, '...') }}" aria-required="true"/>
@@ -62,7 +73,7 @@
                         <label for="hinhanh">Hình ảnh</label>
                         <input  id="file-upload" type="file" name="hinhanh" value="{{ $EditProduct->hinhanh }}" aria-required="true" />
                         <div id="preview" >
-                          <img width="360px" height="214px" src="User/img/item/{{ $EditProduct->hinhanh }}" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
+                          <img width="360px" height="214px" src="user/img/img-detail/{{ $EditProduct->hinhanh }}" id="image-tag" style="display: block; margin-left: auto; margin-right: auto; max-width: 350px;" /> 
                         </div>                                        
                       </div>
 
@@ -73,7 +84,7 @@
 
                       <div class="form-group">
                         <label for="gia">giá</label>
-                        <input type="text" class="form-control" id="gia" name="gia" value="{{ number_format($EditProduct->gia) }}₫" aria-required="true" />
+                        <input type="text" class="form-control" id="gia" name="gia" value="{{ $EditProduct->gia }}" aria-required="true" />
                       </div>
                       
                       <div class="form-group">

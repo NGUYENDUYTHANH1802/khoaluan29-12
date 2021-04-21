@@ -33,7 +33,7 @@ class EditProductUserController extends Controller
         // $dataSave['trangthai'] = 'Chưa bán';
         // // dd($dataSave);
         $dataReq = $request->all();
-        dd($dataReq);
+       
         
         $rules = [
            'ten' =>'required|max:100',
@@ -71,14 +71,14 @@ class EditProductUserController extends Controller
            
         $EditProduct->ten = $request->ten;
         $EditProduct->mota = $request->mota;
-        $EditProduct['trangthai'] = 'Chưa bán';
+        $EditProduct->trangthai = $request->trangthai;
         $EditProduct->gia = $request->gia;
         $EditProduct->sdt = $request->sdt;
         $EditProduct->noidung = $request->noidung;
         $EditProduct->id_nguoi_dung = $request->Session()->get('loginInfo')->id;
         $EditProduct->id_loai_san_pham = $request->id_loai_san_pham;
 
-        dd($EditProduct);
+      
         if ($request->hasFile('hinhanh')) {
             $file = $request->file('hinhanh');
             $imageName = time().$request->hinhanh->getClientOriginalName();
@@ -87,9 +87,9 @@ class EditProductUserController extends Controller
             $EditProduct->hinhanh = $imageName;
         }
     
-        
+       
 
-        // $EditProduct->save();
+        $EditProduct->save();
        
         // return redirect('user/pages/products'.$id);
         return redirect('EditUserProduct.html/'.$id)->with('messages', 'Sửa thông tin sản phẩm thành công.');

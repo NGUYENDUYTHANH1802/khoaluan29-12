@@ -50,23 +50,22 @@
                                     @endforeach
                                 </div>
 
-                                <div class="row">
+                               <!--  <div class="row">
                                     <div class="col-md-12">
                                         <div class="aa-properties-content-bottom">
                                             <nav>
                                                 <ul class="pagination">
                                                     <li>
-                                                        <a aria-label="Previous" href="#">
+                                                        <a aria-label="Previous" href="javascript::;">
                                                             <span aria-hidden="true">«</span>
                                                         </a>
                                                     </li>
-                                                    <li><a href="#">1</a></li>
-                                                    <li><a href="#">2</a></li>
-                                                    <li class="active"><a href="#">22</a></li>
-                                                    <li><a href="#">4</a></li>
-                                                    <li><a href="#">5</a></li>
+                                                   
+                                                    <li class="active"><a href="javascript::;">1</a></li>
+                                                    <li><a href="javascript::;">2</a></li>
+                                                   
                                                     <li>
-                                                        <a aria-label="Next" href="#">
+                                                        <a aria-label="Next" href="javascript::;">
                                                             <span aria-hidden="true">»</span>
                                                         </a>
                                                     </li>
@@ -74,7 +73,7 @@
                                             </nav>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 

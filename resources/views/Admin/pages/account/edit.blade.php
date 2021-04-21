@@ -48,7 +48,7 @@ Sửa tài khoản
           <div class="form-group">
             <label for="permission">Quyền</label>
             <select name="quyen" id="" class="form-control">
-              <option value="123" {{ $user->quyen === "NGUOI_DUNG" ? "selected" : "" }}>Người dùng</option>
+              <option value="NGUOI_DUNG" {{ $user->quyen === "NGUOI_DUNG" ? "selected" : "" }}>Người dùng</option>
               <option value="QUAN_TRI" {{ $user->quyen === "QUAN_TRI" ? "selected" : "" }}>Quản trị</option>   
             </select>
           </div>

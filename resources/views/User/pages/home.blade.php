@@ -29,12 +29,12 @@
                     <span></span>
                   </div>
                   <p>Mục đích tạo ra cho bạn một kênh rao vặt trung gian, kết nối người mua với người bán lại với nhau bằng những giao dịch cực kỳ đơn giản, tiện lợi, nhanh chóng, an toàn, mang đến hiệu quả bất ngờ. Hàng ngàn món hàng từ Nhà cửa, Xe cộ, Đồ điện tử, Vật dụng cá nhân,... được đăng tin, rao bán, chia sẽ miễn phí cho những người cần quyên góp từ thiện, và những người có hoàn cảnh khó khăn.</p>                  
-                  <p>Với …,  bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, với nhiều lĩnh vực:</p>
+                  <p>Bạn có thể dễ dàng mua bán, trao đổi bất cứ một loại mặt hàng nào, với nhiều lĩnh vực:</p>
                   <ul>
                     <li>Đồ dùng cá nhân: quần áo, giày dép, túi xách, đồng hồ... đa phong cách, hợp thời trang.</li>
                     <li>Đồ điện tử: điện thoại di động, máy tính bảng, laptop, tivi, loa, amply...; đồ điện gia dụng: máy giặt, tủ lạnh, máy lạnh... với rất nhiều nhãn hiệu, kích thước khác nhau.</li>
                     <li>Vật nuôi, thú cưng đa chủng loại: gà, chó, chim, mèo, cá, hamster giá cực tốt.</li>                    
-                    <li>Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Chợ Tốt.</li>
+                    <li>Và còn rất nhiều mặt hàng khác nữa đã và đang được rao bán tại Chia Sẻ đồ cũ.</li>
                     
                   </ul>
                 </div>

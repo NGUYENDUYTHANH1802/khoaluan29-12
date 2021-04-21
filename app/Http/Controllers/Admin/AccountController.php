@@ -111,7 +111,7 @@ class AccountController extends Controller
         
 
         if ($req->changePassword == "on")
-        {
+        {   
              $rules = [
             'password' => 'required|max:30|min:6|confirmed',
              ];

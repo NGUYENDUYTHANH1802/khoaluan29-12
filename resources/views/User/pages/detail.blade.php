@@ -15,11 +15,11 @@
                             <div class="aa-blog-content">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <article class="aa-blog-single aa-blog-details">
+                                        <article class="aa-blog-single aa-blog-details aa-properties-item">
                                             <figure class="aa-blog-img">
-                                                <!-- <a href="javascript::;"><img width="1920px" height="1280px" alt="img" src="User/img/item/{{ $detail->hinhanh }}"></a> -->
+                                                
                                                 <a href="javascript::;"><img width="1200px" height="600px" alt="img" src="user/img/img-detail/{{ $detail->hinhanh }}"></a>
-                                                <span class="aa-date-tag">
+                                                
                                                     @if ($detail->trangthai === 'Chưa Bán')
                                                     <div class="aa-tag for-sale">
                                                         {{ $detail->trangthai }}
@@ -32,8 +32,7 @@
                                                     <div class="aa-tag sold-out">
                                                         {{ $detail->trangthai }}
                                                     </div>
-                                                    @endif
-                                                </span>
+                                                    @endif   
                                             </figure>
                                             <div class="aa-blog-single-content">
                                                 <h2>{{ $detail->ten }}</h2>
@@ -43,7 +42,7 @@
                                                     <a class="aa-blog-comments" href="javascript::;"><i class=""></i>{{ number_format($detail->gia) }}₫</a>
                                                 </div>
                                             </div>
-                                            {!! $detail->mota !!}
+                                            {!! $detail->noidung !!}
                                         </article>
                                     </div>
                                     <!-- Post tags -->
@@ -70,7 +69,7 @@
                                         </div>
                                     </div>
                                     <!-- Related blog post -->
-                                    <div class="col-md-12">Sản Phẩm Nổi Bật
+                                    <div class="col-md-12">
                                         <div class="aa-blog-related-post">
                                             <div class="aa-title">
                                                 <h2>Sản phẩm tương tự</h2>
@@ -80,12 +79,12 @@
                                                 <div class="row">
                                                     @foreach ($sanPhamCungTheLoai as $dt)
                                                     <div class="col-md-6 col-sm-6">
-                                                        <article class="aa-blog-single">
+                                                        <article class="aa-blog-single aa-properties-item">
                                                             <figure class="aa-blog-img">
-                                                                <a href="detail/{{ $dt->id }}"><img width="360px" height="214px" src="User/img/item/{{ $dt->hinhanh }}" alt="img"></a>
-                                                                <span class="aa-date-tag">
-                                                                   @if ($dt->trangthai === 'Chưa Bán')
-                                                                   <div class="aa-tag for-sale">
+                                                                <a href="detail/{{ $dt->id }}"><img width="500px" height="250px" src="user/img/img-detail/{{ $dt->hinhanh }}" alt="img"></a>
+                                                              
+                                                                 @if ($dt->trangthai === 'Chưa Bán')
+                                                                 <div class="aa-tag for-sale">
                                                                     {{ $dt->trangthai }}
                                                                 </div>
                                                                 @elseif ( $dt->trangthai === 'Đang Bán')
@@ -98,14 +97,14 @@
                                                                 </div>
                                                                 @endif
 
-                                                                </span>
+                                                               
                                                             </figure>
                                                             <div class="aa-blog-single-content">
                                                                 <h3><a href="javascript::;">{{ \Illuminate\Support\Str::limit($dt->ten, 25, '...') }}</a></h3>
                                                                 <p>{{ \Illuminate\Support\Str::limit($dt->mota, 39, '...') }}</p>
                                                                 <div class="aa-blog-single-bottom">
                                                                     <a href="javascript::;" class="aa-blog-author"><i class="fa fa-user"></i>  {{ $dt->nguoiDung->ten }}</a>
-                                                                    <a href="javascript::;" class="aa-blog-comments"><i class="fa fa-comment-o"></i>6</a>
+                                                                    <a href="javascript::;" class="aa-blog-comments"><i class="fa fa-comment-o"></i>{{ $dt->sdt }}</a>
                                                                 </div>
                                                             </div>
                                                         </article>

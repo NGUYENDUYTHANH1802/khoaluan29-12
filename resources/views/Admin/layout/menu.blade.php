@@ -2,7 +2,7 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Thống kê</div>
-            <a class="nav-link" href="home.html">
+            <a class="nav-link" href="admin/home-admin">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                TRANG CHỦ
             </a>

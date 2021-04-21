@@ -8,7 +8,7 @@
   <title> @yield('title')</title>
   <base href="{{asset('')}}">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="user/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="user/img/anhT.ico" type="image/x-icon">
 
   <!-- Font awesome -->
   <link href="user/css/font-awesome.css" rel="stylesheet">

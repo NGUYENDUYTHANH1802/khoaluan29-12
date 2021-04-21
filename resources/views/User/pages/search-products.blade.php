@@ -16,10 +16,10 @@
                                 <div class="row">
                                     @foreach ($searchProducts as $pd)
                                     <div class="col-md-4 col-sm-4">
-                                        <article class="aa-blog-single">
+                                        <article class="aa-blog-single aa-properties-item">
                                             <figure class="aa-blog-img">
-                                                <a href="detail/{{ $pd->id }}"><img width="360px" height="214px" alt="img" src="user/img/item/{{ $pd->hinhanh }}"></a>
-                                                <span class="aa-date-tag">
+                                                <a href="detail/{{ $pd->id }}"><img width="360px" height="214px" alt="img" src="user/img/img-detail/{{ $pd->hinhanh }}"></a>
+                                               
                                                     @if ($pd->trangthai === 'Chưa Bán')
                                                     <div class="aa-tag for-sale">
                                                         {{ $pd->trangthai }}
@@ -33,7 +33,7 @@
                                                         {{ $pd->trangthai }}
                                                     </div>
                                                     @endif
-                                                </span>
+                                               
                                             </figure>
                                             <div class="aa-blog-single-content">
                                                 <h3><a href="javascript::;">{{ \Illuminate\Support\Str::limit($pd->ten, 25, '...') }}</a></h3>
