@@ -52,10 +52,10 @@ Danh sách Sản Phẩm
                                         <img width="100px" src="user/img/item/{{ $pr->hinhanh }}">
                                     </td>
                                     <td>{{ $pr->trangthai }}</td>
-                                    <td>{{ $pr->mota }}</td>
+                                    <td>{{ \Illuminate\Support\Str::limit($pr->mota, 39, '...') }}</td>
                                     <td>{{ $pr->gia }}</td>
                                     <td>{{ $pr->sdt }}</td>
-                                    <td>{{ $pr->noidung }}</td>
+                                    <td>{{ \Illuminate\Support\Str::limit($pr->noidung, 50, '...') }}</td>
                                      <td>{{ $pr->nguoidung->ten }}</td>
                                     <td class="text-center">
                                        

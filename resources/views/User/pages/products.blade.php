@@ -52,7 +52,7 @@
                           <p>{{ \Illuminate\Support\Str::limit($product->mota, 39, '...') }}</p>
                           <div class="aa-blog-single-bottom">
                             <a class="aa-blog-author" href="javascript::;"><i class="fa fa-user"></i> {{ $product->nguoiDung->ten }}</a>
-                            <a class="aa-blog-comments" href="javascript::;"><i class="fa fa-comment-o"></i>6</a>
+                            <a class="aa-blog-comments" href="javascript::;">{{ $product->sdt }}</a>
                           </div>
                         </div>                   
                       </article>
