@@ -117,30 +117,7 @@
                             </div>
                         </div>
                         @endforeach
-                        <!-- <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="img/item/1.jpg" alt="img">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">This is Title</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <span>$65000</span>
-                            </div>
-                        </div> -->
-                        <!-- <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="img/item/1.jpg" alt="img">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">This is Title</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <span>$65000</span>
-                            </div>
-                        </div> -->
+                      
                     </div>
                 </aside>
             </div>
